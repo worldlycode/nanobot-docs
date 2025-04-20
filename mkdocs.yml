@@ -41,7 +41,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.instant
-    - toc.integrate
+    # - toc.integrate
     - search.suggest
     - search.highlight
 
