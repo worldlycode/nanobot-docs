@@ -94,7 +94,6 @@ nav:
   - Blog: 
     - Overview: blog/index.md
     - MkDocs: blog/mkdocs-2025-03-08.md
-    - Logfire: blog/logfire-2025-03-07.md
     - Logging: blog/logging-2025-03-06.md
 
 extra:
