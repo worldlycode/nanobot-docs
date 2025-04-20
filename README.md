@@ -23,7 +23,7 @@ Our documentation includes:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/srobertsphd/nanobot-docs
+git clone https://github.com/worldlycode/nanobot-docs
 cd nanobot-docs
 ```
 
@@ -57,3 +57,42 @@ mkdocs build
 The built site will be in the `site` directory.
 
 ## 📖 Documentation Structure
+```bash
+docs/
+├── index.md # Home page
+├── getting-started.md # Getting started guide
+├── user-guide/ # User guide section
+│ ├── index.md
+│ ├── document-processing.md
+│ └── vector-search.md
+├── api/ # API documentation
+│ ├── database.md
+│ └── services.md
+├── examples.md # Usage examples
+└── blog/ # Blog posts
+└── index.md
+```
+
+
+## 🎨 Features
+
+- 🌓 Dark/Light mode support
+- 🔍 Full-text search
+- 📱 Responsive design
+- 🔗 Automatic navigation
+- 💻 Code syntax highlighting
+- 📊 Diagrams support (Mermaid)
+- 📝 Google-style Python docstring support
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+[Add your license information here]
+
+## 🔗 Links
+
+- [Documentation Site](https://worldlycode.github.io/nanobot-docs)
+- [Main Project Repository](https://github.com/srobertsphd/nanobot-poc)
