@@ -24,7 +24,7 @@
     
     
       
-        <title>MkDocs - NanoBot-POC Documentation 🤖</title>
+        <title>Choosing MkDocs - NanoBot-POC Documentation 🤖</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MkDocs
+              Choosing MkDocs
             
           </span>
         </div>
@@ -760,7 +760,7 @@
   
   
   <span class="md-ellipsis">
-    MkDocs
+    Choosing MkDocs
     
   </span>
   
@@ -773,7 +773,7 @@
   
   
   <span class="md-ellipsis">
-    MkDocs
+    Choosing MkDocs
     
   </span>
   
@@ -955,6 +955,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-mathjax-for-equation-formatting-and-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding MathJax for Equation formatting and Display
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#closing-comments" class="md-nav__link">
     <span class="md-ellipsis">
       Closing Comments
@@ -999,7 +1008,7 @@
   
   
   <span class="md-ellipsis">
-    Logging
+    Learning about Logging
     
   </span>
   
@@ -1199,6 +1208,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-mathjax-for-equation-formatting-and-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding MathJax for Equation formatting and Display
+    </span>
+  </a>
   
 </li>
       
@@ -1483,9 +1501,46 @@ git<span class="w"> </span>push
   C --&gt; D[Debug];
   D --&gt; B;
   B ----&gt;|No| E[Success!];</code></pre>
+<h2 id="adding-mathjax-for-equation-formatting-and-display">Adding MathJax for Equation formatting and Display<a class="headerlink" href="#adding-mathjax-for-equation-formatting-and-display" title="Permanent link">&para;</a></h2>
+<p>Taken from the documents -- you will need to add a javascripts folder with the following code, and also modify the mkdocs.yml file as below:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">docs/javascript/mathjax.js</label><label for="__tabbed_2_2">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">tex</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">inlineMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;\\)&quot;</span><span class="p">]],</span>
+<span class="w">    </span><span class="nx">displayMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;\\]&quot;</span><span class="p">]],</span>
+<span class="w">    </span><span class="nx">processEscapes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">processEnvironments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ignoreHtmlClass</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;.*|&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">processHtmlClass</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;arithmatex&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">startup</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">clearCache</span><span class="p">()</span>
+<span class="w">  </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">typesetClear</span><span class="p">()</span>
+<span class="w">  </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">texReset</span><span class="p">()</span>
+<span class="w">  </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">typesetPromise</span><span class="p">()</span>
+<span class="p">})</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.arithmatex</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">generic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">extra_javascript</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/mathjax.js</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="closing-comments">Closing Comments<a class="headerlink" href="#closing-comments" title="Permanent link">&para;</a></h2>
 <p>Writing code is so much fun.  Learning new libraries in minutes is amazing fun.  Leaning how to document things and start writing in less than an hour and having it look good and be accessible --&gt; INCREDIBLE good feeling.   </p>
-<p>No drugs needed.  </p>
 <p>This is a pretty sweet gig.  </p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <div class="footnote">
