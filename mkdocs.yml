@@ -1,5 +1,5 @@
-site_name: NanoBot Documentation 🤖
-site_description: Documentation for the NanoBot POC project
+site_name: NanoBot-POC Documentation 🤖
+site_description: Documentation for the NanoBot-POC project
 site_url: https://worldlycode.github.io/nanobot-docs
 repo_url: https://github.com/srobertsphd/nanobot-poc
 repo_name: nanobot-poc
@@ -52,7 +52,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: docs
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist
@@ -68,6 +69,12 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
   - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search
@@ -93,8 +100,8 @@ nav:
   - Examples: examples.md
   - Blog: 
     - Overview: blog/index.md
-    - MkDocs: blog/mkdocs-2025-03-08.md
-    - Logging: blog/logging-2025-03-06.md
+    - Choosing MkDocs: blog/mkdocs-2025-03-08.md
+    - Learning about Logging: blog/logging-2025-03-06.md
 
 extra:
   social:

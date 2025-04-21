@@ -1,5 +1,5 @@
 # Hello World 🌐
-Welcome to the NanoBot development blog! Here I share updates, insights, and lessons learned while building this project.  
+Welcome to the NanoBot-POC development blog! Here we share updates, insights, and lessons learned while building this project.  
 
-Click through the things that I learned in the left sidebar.  
+Click through the topics in the left sidebar to browse the selection.  
 
