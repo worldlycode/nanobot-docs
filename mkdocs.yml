@@ -92,6 +92,7 @@ nav:
   - Getting Started: getting-started.md
   - User Guide:
     - Overview: user-guide/index.md
+    - Utils: user-guide/utils.md
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - API Reference:
