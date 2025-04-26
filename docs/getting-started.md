@@ -14,8 +14,8 @@ This guide will help you set up and start using NanoBot.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nanobot-poc.git
-   cd nanobot-poc
+   git clone https://github.com/yourusername/nanobot-dev.git
+   cd nanobot-dev
    ```
 
 2. Create a virtual environment:
@@ -39,6 +39,7 @@ This guide will help you set up and start using NanoBot.
    LOCAL_DB_HOST=localhost
    LOCAL_DB_PORT=5432
    LOGFIRE_TOKEN=your_logfire_token
+   NEO
    ```
 
 5. Initialize the database:
