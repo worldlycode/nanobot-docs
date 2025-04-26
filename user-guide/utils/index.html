@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../document-processing/">
+        <link rel="next" href="../tests/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -563,10 +563,65 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logging_examplespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging_examples.py
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -901,6 +956,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logging_examplespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging_examples.py
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -927,7 +991,7 @@
 <p>The <code>tree.py</code> utility draws a tree of the project or directory.  To run this from the <strong>root directory</strong> command line (from the <code>nanobot-poc</code> directory), entering</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>app.utils.tree/utils
 </code></pre></div>
-<p>will print the following structure in the terminal
+<p>will print the following structure in the terminal</p>
 <div class="highlight"><pre><span></span><code>app/
 ├──<span class="w"> </span>utils/
 │<span class="w">   </span>├──<span class="w"> </span>__init.__.py
@@ -937,9 +1001,9 @@
 │<span class="w">   </span>├──<span class="w"> </span>tree.py
 │<span class="w">   </span>├──<span class="w"> </span>file_handling.py
 │<span class="w">   </span>├──<span class="w"> </span>tokenizer.py
-</code></pre></div></p>
-<p>This runs it using the Python module path.  Note, this is equilivalent to the following:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>app/utils/tree.py
+</code></pre></div>
+<p>To print the entire tree structure you would use:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>app.utils.tree
 </code></pre></div>
 <p>You can also add arguments as follows in the following examples:
 <div class="highlight"><pre><span></span><code><span class="c1"># Show entire tree (excluding default dirs)</span>
@@ -951,6 +1015,15 @@ python<span class="w"> </span>-m<span class="w"> </span>app.utils.tree<span clas
 <span class="c1"># Show only 1 level deep</span>
 python<span class="w"> </span>-m<span class="w"> </span>app.utils.tree<span class="w"> </span>.<span class="w"> </span><span class="m">1</span>
 </code></pre></div></p>
+<h2 id="logging_examplespy"><code>logging_examples.py</code><a class="headerlink" href="#logging_examplespy" title="Permanent link">&para;</a></h2>
+<p>This code is essentially a test script to test the logging functionality and configuration and will populate test log files in the following directory </p>
+<p><div class="highlight"><pre><span></span><code>nanobot-poc/
+├──<span class="w"> </span>logs/
+</code></pre></div>
+It is fun from the terminal when in the root <code>nanobot-poc</code> directory with the following command
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>app.utils.logging_examples
+</code></pre></div></p>
+<p>I think eventually we may want to move this to test functionality</p>
 
 
 

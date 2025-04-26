@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-docs/blog/logging-2025-03-06/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-docs/user-guide/tests/">
       
       
-        <link rel="prev" href="../mkdocs-2025-03-08/">
+        <link rel="prev" href="../utils/">
       
+      
+        <link rel="next" href="../git/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Learning about Logging - NanoBot-POC Documentation 🤖</title>
+        <title>Tests - NanoBot-POC Documentation 🤖</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#logging-with-pythons-standard-library" class="md-skip">
+        <a href="#tests" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learning about Logging
+              Tests
             
           </span>
         </div>
@@ -259,11 +261,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../user-guide/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -318,13 +322,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   
@@ -429,28 +431,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -463,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -477,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -500,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/utils/" class="md-nav__link">
+      <a href="../utils/" class="md-nav__link">
         
   
   
@@ -520,10 +525,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../user-guide/tests/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -534,6 +561,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pytest
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -546,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -569,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/document-processing/" class="md-nav__link">
+      <a href="../document-processing/" class="md-nav__link">
         
   
   
@@ -592,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/vector-search/" class="md-nav__link">
+      <a href="../vector-search/" class="md-nav__link">
         
   
   
@@ -739,31 +795,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -776,7 +829,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -790,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   
@@ -813,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs-2025-03-08/" class="md-nav__link">
+      <a href="../../blog/mkdocs-2025-03-08/" class="md-nav__link">
         
   
   
@@ -833,32 +886,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Learning about Logging
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../blog/logging-2025-03-06/" class="md-nav__link">
         
   
   
@@ -869,125 +900,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pythons-logging-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python's Logging Module
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python&#39;s Logging Module">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-logging-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setup Logging Config
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#another-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Another Subsection]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#another-main-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Another Main Section]
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Another Main Section]">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#technical-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Technical Details]
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Technical Details]">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#detailed-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Detailed Subsection]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#important-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#closing-thoughts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Closing Thoughts
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1027,99 +939,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pythons-logging-module" class="md-nav__link">
+  <a href="#pytest" class="md-nav__link">
     <span class="md-ellipsis">
-      Python's Logging Module
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python&#39;s Logging Module">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-logging-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setup Logging Config
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#another-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Another Subsection]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#another-main-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Another Main Section]
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Another Main Section]">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#technical-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Technical Details]
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Technical Details]">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#detailed-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Detailed Subsection]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#important-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#closing-thoughts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Closing Thoughts
+      Pytest
     </span>
   </a>
   
@@ -1144,56 +966,27 @@
   
 
 
-<h1 id="logging-with-pythons-standard-library"><strong>Logging with Python's Standard Library</strong><a class="headerlink" href="#logging-with-pythons-standard-library" title="Permanent link">&para;</a></h1>
-<p><strong>Date:</strong> March 6, 2025<br />
-<strong>Author:</strong> Worldly Woman</p>
-<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
-
-<p>Logging, or tracking what happens as your code executes is pretty important to knowing what happened when things don't go as planned.  I have learned it is like inserting print statements in your code, but these statement can print out to the console (terminal or stdout), to a file, to an external logger (such as Logfire, which I will talk about in another post).  </p>
-<p>The bottom line is that you can write an awful lot of code in a notebook, or in small modules, and not have to track things.  But when things start getting big, with thousands of lines of code, you really need to be able to log what is going on especially to find bugs etc.  </p>
-<p>Plus, learning about logging makes you feel like a pro, like you have entered the big-time.  So lets get logging.  </p>
-<h2 id="pythons-logging-module"><strong>Python's Logging Module</strong><a class="headerlink" href="#pythons-logging-module" title="Permanent link">&para;</a></h2>
-<h3 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h3>
-<p>There is nothing to install, the logging module comes standard with Python!  You just need to add the following at the top of your files.<br />
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
-</code></pre></div></p>
-<h3 id="setup-logging-config">Setup Logging Config<a class="headerlink" href="#setup-logging-config" title="Permanent link">&para;</a></h3>
-<p>So I started by following a few tutorials.  The one that helped me the most was from <strong>mCoding</strong> and called <strong>Modern Python Logging</strong>.  Click on thumbnail below to be redirected to the video.  </p>
-<p><a href="https://www.youtube.com/watch?v=9L77QExPmI0">
-  <img src="https://img.youtube.com/vi/9L77QExPmI0/maxresdefault.jpg" alt="Video Title" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</a></p>
-<p>[Main content goes here. You can include links like this: <a href="https://example.com">Link Text</a>]</p>
-<blockquote>
-<p>NOTE: [Use blockquotes for important notes or callouts]</p>
-</blockquote>
-<h3 id="another-subsection">[Another Subsection]<a class="headerlink" href="#another-subsection" title="Permanent link">&para;</a></h3>
-<p>[More content here. Feel free to include code samples:]</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Example code</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World! 🌐&quot;</span><span class="p">)</span>
+<h1 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h1>
+<p>Last updated 4/26/2025 by Worldly Woman</p>
+<p>The importance of writing test code on an ongoing basis is becomming apparant to me.  This is especially so with the involvement of multiple contributors.  </p>
+<p>Obviously this test folder should only exist in the development code (as opposed to the deployed production code)</p>
+<h2 id="pytest">Pytest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h2>
+<p>Currently we are using the <code>pytest</code> module for our tests.  As of the date of the writing of this post the test directory contains the following tests:</p>
+<div class="highlight"><pre><span></span><code>├──<span class="w"> </span>tests/
+│<span class="w">   </span>├──<span class="w"> </span>test_database_retrieval.py
+│<span class="w">   </span>├──<span class="w"> </span>test_config_settings.py
+│<span class="w">   </span>├──<span class="w"> </span>test_transaction.py
+│<span class="w">   </span>├──<span class="w"> </span>test_chunking_service.py
+│<span class="w">   </span>├──<span class="w"> </span>test_error_handling.py
+│<span class="w">   </span>├──<span class="w"> </span>test_document_service.py
+│<span class="w">   </span>├──<span class="w"> </span>test_pydantic_validator.py
+│<span class="w">   </span>├──<span class="w"> </span>__init__.py
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
+<p>This entire test code can be run from the root directory by running</p>
+<div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>tests
 </code></pre></div>
-<h2 id="another-main-section">[Another Main Section]<a class="headerlink" href="#another-main-section" title="Permanent link">&para;</a></h2>
-<p>[Continue with more content as needed]</p>
-<h3 id="technical-details">[Technical Details]<a class="headerlink" href="#technical-details" title="Permanent link">&para;</a></h3>
-<p>[If applicable, include technical details, steps, or instructions]</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Example command</span>
-<span class="nb">command</span><span class="w"> </span>--option<span class="w"> </span>value
-</code></pre></div>
-<h4 id="detailed-subsection">[Detailed Subsection]<a class="headerlink" href="#detailed-subsection" title="Permanent link">&para;</a></h4>
-<p>[Add more detailed information if necessary]</p>
-<blockquote>
-<h4 id="important-notes">Important Notes<a class="headerlink" href="#important-notes" title="Permanent link">&para;</a></h4>
-<ul>
-<li>[First important point]  </li>
-<li>[Second important point]  </li>
-<li>[Third important point]</li>
-</ul>
-</blockquote>
-<h2 id="closing-thoughts">Closing Thoughts<a class="headerlink" href="#closing-thoughts" title="Permanent link">&para;</a></h2>
-<p>[Summarize what you've covered and include any final thoughts or future directions]</p>
-<p>[Optional: Add a fun closing remark or personal touch]</p>
+<p>To be rigerously honest, I asked Claude to generate most of these tests, though I have modified some of them.  But the idea is for every module that we write we should have some tests that continuously test the functionality of the module, and run this test code frequently, at least daily.  </p>
+<p>This will let us catch quickly where our code may have inadvertly gotten broken or had undesired effects and allow us to fix things quickly.  </p>
 
 
 
