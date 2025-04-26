@@ -1,2 +1,2 @@
 # Examples
-this is example
+this is where examples will go

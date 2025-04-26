@@ -1,7 +1,7 @@
 # Managing Packages and Imports
 
 **Date:** April 25, 2025  
-**Author:** Worldly Woman
+**Author:** sam-i-am
 
 <pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
 

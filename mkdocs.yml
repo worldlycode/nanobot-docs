@@ -1,11 +1,7 @@
 site_name: NanoBot-POC Documentation 🤖
 site_description: Documentation for the NanoBot-POC project
-site_url: https://worldlycode.github.io/nanobot-docs
-repo_url: https://github.com/srobertsphd/nanobot-poc
-repo_name: nanobot-poc
-author: Worldly Woman
-
-
+site_url: https://worldlycode.github.io/nanobot-dev-docs
+repo_name: nanobot-dev
 
 # Standard docs directory
 docs_dir: docs
