@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/examples/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/examples/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/getting-started/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/getting-started/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/api/database/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/api/database/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/api/services/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/api/services/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/00-blog-template/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/00-blog-template/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/logging-2025-03-06/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/logging-2025-03-06/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/mkdocs-2025-03-08/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/mkdocs-2025-03-08/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/packages-and-imports/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/packages-and-imports/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/pgadmin/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/pgadmin/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/blog/scripts-and-modules/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/blog/scripts-and-modules/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/document-processing/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/document-processing/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/document_structure/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/document_structure/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/git/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/git/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/tests/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/tests/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/utils/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/utils/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-docs/user-guide/vector-search/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/vector-search/</loc>
          <lastmod>2025-04-26</lastmod>
     </url>
 </urlset>
