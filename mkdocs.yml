@@ -94,6 +94,7 @@ nav:
     - Overview: user-guide/index.md
     - Utils: user-guide/utils.md
     - Tests: user-guide/tests.md
+    - Git: user-guide/git.md
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - API Reference:
