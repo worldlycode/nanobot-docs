@@ -13,6 +13,7 @@ python -m app.utils.tree/utils
 ```
 
 will print the following structure in the terminal
+
 ```bash
 app/
 ├── utils/
@@ -25,10 +26,10 @@ app/
 │   ├── tokenizer.py
 ```
 
-This runs it using the Python module path.  Note, this is equilivalent to the following:
+To print the entire tree structure you would use:
 
 ```bash
-python app/utils/tree.py
+python -m app.utils.tree
 ```
 
 You can also add arguments as follows in the following examples:
@@ -42,4 +43,20 @@ python -m app.utils.tree app/services
 # Show only 1 level deep
 python -m app.utils.tree . 1
 ```
+
+
+## `logging_examples.py`
+
+This code is essentially a test script to test the logging functionality and configuration and will populate test log files in the following directory 
+
+```bash
+nanobot-poc/
+├── logs/
+```
+It is fun from the terminal when in the root `nanobot-poc` directory with the following command
+```bash
+python -m app.utils.logging_examples
+```
+
+I think eventually we may want to move this to test functionality
 
