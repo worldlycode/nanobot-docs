@@ -1,5 +1,10 @@
 # Managing Packages and Imports
 
+**Date:** April 25, 2025  
+**Author:** Worldly Woman
+
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
+
 ## Cleaning up your virrual environment
 
 One always wants to would in a development environment.  most often this is done by creating an environment that your codebase depends on using something like `venv`, which is what we are currently using in our projects.  
@@ -20,7 +25,6 @@ pip install pipreqs
 ```bash
 pipreqs . --force
 ```
-
 
 ## Importing and using local packages
 
