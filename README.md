@@ -37,6 +37,20 @@ source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
 ```bash
 pip install -r requirements.txt
 ```
+However a more minimal requirement list might look like:
+```txt
+mkdocs
+mkdocs-material
+mkdocs-autorefs
+mkdocs-get-deps
+mkdocs-material-extensions
+mkdocstrings
+mkdocstrings-python
+pymdown-extensions
+pyyaml
+pyyaml_env_tag
+ghp-import
+```
 
 ### Running the Documentation Server
 
