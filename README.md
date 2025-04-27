@@ -73,7 +73,7 @@ docs/
 │ └── blog_post_1
 │ └── blog_post_2
 │ └── ...
-├── assets/             # files for inclusion in posts
+├── assets/             # files for inclusion in .md posts
 │ ├── images
 │ └── pdfs
 ```
