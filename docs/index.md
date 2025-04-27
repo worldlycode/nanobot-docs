@@ -16,13 +16,11 @@ NanoBot is a document processing and retrieval system with vector search capabil
 
 ## Purpose of this development codebase
 
-We are working here to develop a codebase that creates an intuitive pipeline that can be more easily followed, understood and modified by all members involved in the development. The Dev component is a robust pipeline that can empower people and orginazitions to generate their very own Bot with their own documentation, enabling them to also demonstrate and understand the power and potential of GenAI in their own labs, facilities and research.
+We are developing a codebase that creates an intuitive pipeline that can be easily followed, understood and modified by all members involved in the development. The Dev component is a robust pipeline that can empower people and organizations to generate their very own Bot with their own documentation, enabling them to also demonstrate and understand the power and potential of GenAI in their own labs, facilities and research.
 
-This project presumes that an out-of-the box chatbot developed for you using many onlne WYSIWYG frameworks, is great for concept, but often fails on utility.  By introducing and teaching these concepts in a python codebase framework, we open up the power of Generative AI with only a few custimizations.  
+This project presumes that an out-of-the-box chatbot developed using many online WYSIWYG frameworks is great for concept, but often fails on utility. By introducing and teaching these concepts in a python codebase framework, we open up the power of Generative AI with only a few customizations.  
 
-It is our hope by doing so, that we not only create a cohesive codebase with functional code for our respective facilities, but that we are able to bring new menbers on board to help them be able to emply instances of this codebase at their own locations, and that they are also able to contribute themselves in building out this worthwhile effort.  
-
-This building of Code simultaneously builds community, and further collaboration -- this is \(\mathbf{C}^3\)
+It is our hope by doing so, that we not only create a cohesive codebase with functional code for our respective facilities, but that we are able to bring new members on board to help them employ instances of this codebase at their own locations. This building of code simultaneously builds community and further collaboration — this is $\mathbf{C}^3$
 
 ## Quick Navigation
 

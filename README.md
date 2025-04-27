@@ -37,18 +37,11 @@ source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
 ```bash
 pip install -r requirements.txt
 ```
-However a more minimal requirement list might look like:
+The packages this will install are as follows
 ```txt
-mkdocs
 mkdocs-material
-mkdocs-autorefs
-mkdocs-get-deps
-mkdocs-material-extensions
-mkdocstrings
-mkdocstrings-python
+mkdocstrings[python]
 pymdown-extensions
-pyyaml
-pyyaml_env_tag
 ghp-import
 ```
 
@@ -70,6 +63,13 @@ mkdocs build
 
 The built site will be in the `site` directory.
 
+### Deploying onto GitHub
+
+To deploy live on Github Pages site:
+```bash
+mkdocs gh-deploy
+```
+
 ## 📖 Documentation Structure
 ```bash
 docs/
@@ -77,8 +77,8 @@ docs/
 ├── getting-started.md # Getting started guide
 ├── user-guide/ # User guide section
 │ ├── index.md
-│ ├── document-processing.md
-│ └── vector-search.md
+│ ├── doc_1.md
+│ └── doc_2.md
 ├── api/ # API documentation
 │ ├── database.md
 │ └── services.md
@@ -100,13 +100,11 @@ docs/
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-[Add your license information here]
+At this time, contributions to documentation are limited to invited collaborators only
 
 ## 🔗 Links
 
-- [Documentation Site](https://worldlycode.github.io/nanobot-docs)
-- [Main Project Repository](https://github.com/srobertsphd/nanobot-poc)
+- [Documentation Site](https://worldlycode.github.io/nanobot-dev-docs)
+- [Main Project Repository](https://github.com/worldlycode/nanobot-dev)
+
+**Note:** Though the documentation and resources discussed are open to all, the project repo is currently private while we are under development. 
