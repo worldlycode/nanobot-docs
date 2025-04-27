@@ -1,17 +1,6 @@
 # NanoBot-Dev Documentation 🤖
 
-This repository contains the documentation for the NanoBot POC project, built using MkDocs with the Material theme.
-
-## 📚 Documentation Overview
-
-Our documentation includes:
-- Getting Started guide
-- User Guide with detailed information about:
-  - Document Processing
-  - Vector Search
-- API Reference
-- Examples
-- Blog posts
+This repository contains the documentation for the NanoBot-Dev project, built using [MkDocs](https://www.mkdocs.org/) with the [Material theme](https://squidfunk.github.io/mkdocs-material/).
 
 ## 🛠️ Local Development
 
@@ -63,30 +52,37 @@ mkdocs build
 
 The built site will be in the `site` directory.
 
-### Deploying onto GitHub
+## Deploying onto GitHub
 
 To deploy live on Github Pages site:
 ```bash
 mkdocs gh-deploy
 ```
 
+The site will update and be live on [WorldlyCode GitHub Pages](https://worldlycode.github.io/nanobot-dev-docs/)
+
 ## 📖 Documentation Structure
 ```bash
 docs/
-├── index.md # Home page
-├── getting-started.md # Getting started guide
-├── user-guide/ # User guide section
+├── index.md            # Home page
+├── getting-started.md  # Getting started guide
+├── examples.md         # Usage examples
+├── user-guide/         # User guide section
 │ ├── index.md
 │ ├── doc_1.md
 │ └── doc_2.md
-├── api/ # API documentation
+├── api/                # API documentation
 │ ├── database.md
 │ └── services.md
-├── examples.md # Usage examples
-└── blog/ # Blog posts
-└── index.md
+└── blog/               # Blog posts
+│ ├── index.md
+│ └── blog_post_1
+│ └── blog_post_2
+│ └── ...
+└── assets/
+│ ├── images
+│ └── pdfs
 ```
-
 
 ## 🎨 Features
 
@@ -107,4 +103,4 @@ At this time, contributions to documentation are limited to invited collaborator
 - [Documentation Site](https://worldlycode.github.io/nanobot-dev-docs)
 - [Main Project Repository](https://github.com/worldlycode/nanobot-dev)
 
-**Note:** Though the documentation and resources discussed are open to all, the project repo is currently private while we are under development. 
+**Note:** Though the documentation and resources discussed are open to all, the project repo is currently private while we are under development. mkdocs
