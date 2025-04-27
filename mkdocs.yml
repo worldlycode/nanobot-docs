@@ -87,10 +87,10 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - User Guide:
-    - Overview: user-guide/index.md
+    - Overview: user-guide/00_index.md
     - Utils: user-guide/utils.md
-    - Tests: user-guide/tests.md
-    - Git: user-guide/git.md
+    - Coding withTests: user-guide/tests.md
+    - Collaborating withGit: user-guide/git.md
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - API Reference:
