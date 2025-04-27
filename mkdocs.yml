@@ -96,10 +96,12 @@ nav:
     - Vector Search: user-guide/vector-search.md
   - Blog: 
     - Overview: blog/index.md
+    - Markdown Cheatsheet: blog/markdown.md
     - Choosing MkDocs: blog/mkdocs-2025-03-08.md
     - Understanding Docling: blog/docling.md
     - Learning about Logging: blog/logging-2025-03-06.md
     - Packages and Imports: blog/packages-and-imports.md
+
   - API Reference:
     - Database: api/database.md
     - Services: api/services.md

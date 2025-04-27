@@ -2,7 +2,9 @@
 
 This repository contains the documentation for the NanoBot-Dev project, built using [MkDocs](https://www.mkdocs.org/) with the [Material theme](https://squidfunk.github.io/mkdocs-material/).
 
-## 🛠️ Local Development
+## 🛠️ Local Documentation Development
+
+You will need to install on your local machine to contribute to the documentation.
 
 ### Prerequisites
 - Python 3.x
@@ -73,7 +75,7 @@ docs/
 │ └── blog_post_1
 │ └── blog_post_2
 │ └── ...
-├── assets/             # files for inclusion in .md posts
+├── assets/             # storage for files
 │ ├── images
 │ └── pdfs
 ```
@@ -94,9 +96,15 @@ The key file that is used to structure the appearance of these files is in the `
 
 At this time, contributions to documentation are limited to invited collaborators only
 
-## 🔗 Links
+## Markdown
 
-- [Documentation Site](https://worldlycode.github.io/nanobot-dev-docs)
+If you want to contribute to the building of this documentation, but do not know Markdown formatting, do not worry!  It is very simple.  Plus it is the best way to write in plain text with just a few simple annotations.  
+
+Refer to the `Markdown Page` in the blog for a cheatsheet and some other links if you want to do a deeper dive.  
+
+## 🔗 GitHub Links
+
+- [Live Documentation Site](https://worldlycode.github.io/nanobot-dev-docs)
 - [Main Project Repository](https://github.com/worldlycode/nanobot-dev)
 
 **Note:** Though the documentation and resources discussed are open to all, the project repo is currently private while we are under development. mkdocs
