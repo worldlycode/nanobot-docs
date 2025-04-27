@@ -107,8 +107,8 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/worldlywoman/nanobot-dev-docs
+      link: https://github.com/worldlycode/nanobot-dev-docs
     # - icon: fontawesome/brands/linkedin
-    #   link: https://www.linkedin.com/in/worldlywoman/
+    #   link: https://www.linkedin.com/in/worldlycode/
 
 copyright: "© 2025 WorldlyCode"
