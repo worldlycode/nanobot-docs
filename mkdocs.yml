@@ -84,7 +84,7 @@ plugins:
             show_root_heading: true
 
 nav:
-  - Home: home_page.md
+  - Home: index.md
   - Getting Started: getting-started.md
   - User Guide:
     - Overview: user-guide/00_index.md

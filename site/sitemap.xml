@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://worldlycode.github.io/nanobot-dev-docs/</loc>
-         <lastmod>2025-04-27</lastmod>
-    </url>
-    <url>
          <loc>https://worldlycode.github.io/nanobot-dev-docs/examples/</loc>
          <lastmod>2025-04-27</lastmod>
     </url>
     <url>
          <loc>https://worldlycode.github.io/nanobot-dev-docs/getting-started/</loc>
+         <lastmod>2025-04-27</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/home_page/</loc>
          <lastmod>2025-04-27</lastmod>
     </url>
     <url>
