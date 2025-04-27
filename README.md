@@ -43,16 +43,7 @@ mkdocs serve
 
 Visit `http://127.0.0.1:8000` to view the documentation.
 
-### Building the Documentation
-
-To build the static site:
-```bash
-mkdocs build
-```
-
-The built site will be in the `site` directory.
-
-## Deploying onto GitHub
+## Deploying to GitHub
 
 To deploy live on Github Pages site:
 ```bash
@@ -62,6 +53,7 @@ mkdocs gh-deploy
 The site will update and be live on [WorldlyCode GitHub Pages](https://worldlycode.github.io/nanobot-dev-docs/)
 
 ## 📖 Documentation Structure
+
 ```bash
 docs/
 ├── index.md            # Home page
@@ -71,18 +63,22 @@ docs/
 │ ├── index.md
 │ ├── doc_1.md
 │ └── doc_2.md
+│ └── ...
 ├── api/                # API documentation
 │ ├── database.md
 │ └── services.md
+│ └── ...
 └── blog/               # Blog posts
 │ ├── index.md
 │ └── blog_post_1
 │ └── blog_post_2
 │ └── ...
-└── assets/
+├── assets/             # files for inclusion in posts
 │ ├── images
 │ └── pdfs
 ```
+
+The key file that is used to structure the appearance of these files is in the `mkdocs.yml` file in the root directory.  Every addition of a file must be updated in this file.  
 
 ## 🎨 Features
 
