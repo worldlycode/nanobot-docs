@@ -100,6 +100,7 @@ nav:
   - Blog: 
     - Overview: blog/index.md
     - Choosing MkDocs: blog/mkdocs-2025-03-08.md
+    - Understanding Docling: blog/docling.md
     - Learning about Logging: blog/logging-2025-03-06.md
     - Packages and Imports: blog/packages-and-imports.md
 extra:

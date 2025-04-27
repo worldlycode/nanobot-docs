@@ -14,7 +14,7 @@ This guide will help you set up and start using NanoBot.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nanobot-dev.git
+   git clone https://github.com/worldlycode/nanobot-dev.git
    cd nanobot-dev
    ```
 

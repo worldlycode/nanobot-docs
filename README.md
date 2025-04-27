@@ -1,4 +1,4 @@
-# NanoBot Documentation 🤖
+# NanoBot-Dev Documentation 🤖
 
 This repository contains the documentation for the NanoBot POC project, built using MkDocs with the Material theme.
 
