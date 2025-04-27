@@ -12,7 +12,7 @@ NanoBot is a document processing and retrieval system with vector search capabil
 - Store the document data and text in a relational database
 - Search documents via a simple chatbot interface
 
-![NanoBot Schema](img/first-nanobot-schema.png)
+![NanoBot Schema](assets/images/first-nanobot-schema.png)
 
 ## Purpose of this development codebase
 

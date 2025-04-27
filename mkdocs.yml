@@ -89,8 +89,9 @@ nav:
   - User Guide:
     - Overview: user-guide/00_index.md
     - Utils: user-guide/utils.md
-    - Coding withTests: user-guide/tests.md
-    - Collaborating withGit: user-guide/git.md
+    - Setting upLogfire: user-guide/logfire.md
+    - Coding with Tests: user-guide/tests.md
+    - Collaborating with Git: user-guide/git.md
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - API Reference:
@@ -106,8 +107,8 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/worldlywoman/nanobot
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/worldlywoman/
+      link: https://github.com/worldlywoman/nanobot-dev-docs
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/worldlywoman/
 
 copyright: "© 2025 WorldlyCode"
