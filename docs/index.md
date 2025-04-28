@@ -4,7 +4,7 @@ Welcome to the NanoBot-Dev documentation. This site provides comprehensive infor
 
 ## What is NanoBot?
 
-NanoBot is a document processing and retrieval system with vector search capabilities. It allows you to:
+NanoBot is a GenAI powered document processing and retrieval system with vector search capabilities. It allows you to:
 
 - Process documents (PDF, DOCX, TXT, Google Sheets etc)
 - Chunk documents into manageable pieces

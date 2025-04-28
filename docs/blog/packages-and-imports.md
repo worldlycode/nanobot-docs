@@ -26,20 +26,23 @@ pip install pipreqs
 pipreqs . --force
 ```
 
+---
+
 ## Importing and using local packages
 
-This is a good reference for importing packages:
+This is a good reference for importing packages from a good python content creator with the following channel: **Tech with Tim**:
 
-<a href="https://www.youtube.com/watch?v=VEbuZox5qC4">
-  <img src="https://www.youtube.com/watch?v=VEbuZox5qC4/sddefault.jpg" alt="Video Title" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</a>
+<div align="center" markdown="1">
+  [![Python Packages and Imports Tutorial](https://img.youtube.com/vi/VEbuZox5qC4/0.jpg){: style="max-width: 400px; border: 3px solid #ccc; border-radius: 10px;"}](https://www.youtube.com/watch?v=VEbuZox5qC4)
+</div>
 
-https://www.youtube.com/watch?v=VEbuZox5qC4
+---
 
-Tech with Tim
+## How to import a module from within the package
 
+As an example:  
 
-from the chunking.py file in the document_conversion folder, I want to import the Chunks and ChunkMetadata classes from the models.db_schemas module.
+From the chunking.py file in the document_conversion folder, I want to import the Chunks and ChunkMetadata classes from the models.db_schemas module.
 
 ```python
 import sys

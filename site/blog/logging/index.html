@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/user-guide/00_index/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/blog/logging/">
       
       
-        <link rel="prev" href="../../getting-started/">
+        <link rel="prev" href="../docling/">
       
       
-        <link rel="next" href="../utils/">
+        <link rel="next" href="../packages-and-imports/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Overview - NanoBot-Dev Documentation 🤖</title>
+        <title>Logging with Python - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#our-current-selections-for-infrastructure" class="md-skip">
+        <a href="#logging-with-pythons-standard-library" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Logging with Python
             
           </span>
         </div>
@@ -249,13 +249,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../user-guide/00-index-user-guide/" class="md-tabs__link">
           
   
   
@@ -271,11 +269,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-blog/" class="md-tabs__link">
           
   
   
@@ -407,31 +407,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -444,7 +441,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -455,30 +452,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user-guide/00-index-user-guide/" class="md-nav__link">
         
   
   
@@ -489,84 +466,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#our-current-selections-for-infrastructure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Our Current Selections for Infrastructure
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Our Current Selections for Infrastructure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-as-our-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python as our Language
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#document-parsing-and-chunking" class="md-nav__link">
-    <span class="md-ellipsis">
-      Document parsing and chunking
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prompts-with-jinja-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompts with Jinja Templates
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-generative-ai-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choice of Generative AI Models
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -579,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../../user-guide/utils/" class="md-nav__link">
         
   
   
@@ -602,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logfire/" class="md-nav__link">
+      <a href="../../user-guide/logfire/" class="md-nav__link">
         
   
   
@@ -625,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tests/" class="md-nav__link">
+      <a href="../../user-guide/tests/" class="md-nav__link">
         
   
   
@@ -648,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../user-guide/git/" class="md-nav__link">
         
   
   
@@ -671,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document-processing/" class="md-nav__link">
+      <a href="../../user-guide/document-processing/" class="md-nav__link">
         
   
   
@@ -694,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector-search/" class="md-nav__link">
+      <a href="../../user-guide/vector-search/" class="md-nav__link">
         
   
   
@@ -721,28 +620,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -755,7 +657,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -769,12 +671,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../00-index-blog/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    Welcome!
     
   </span>
   
@@ -792,30 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/markdown/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Markdown Cheatsheet
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../blog/mkdocs-2025-03-08/" class="md-nav__link">
+      <a href="../mkdocs/" class="md-nav__link">
         
   
   
@@ -838,7 +717,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/docling/" class="md-nav__link">
+      <a href="../markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docling/" class="md-nav__link">
         
   
   
@@ -858,15 +760,113 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../blog/logging-2025-03-06/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Logging with Python
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Learning about Logging
+    Logging with Python
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pythons-logging-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python's Logging Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python&#39;s Logging Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-logging-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Logging Config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages-and-imports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packages and Imports
     
   </span>
   
@@ -884,12 +884,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/packages-and-imports/" class="md-nav__link">
+      <a href="../pgadmin/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Packages and Imports
+    Configuring pgAdmin
     
   </span>
   
@@ -1044,6 +1044,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1052,55 +1054,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#our-current-selections-for-infrastructure" class="md-nav__link">
+  <a href="#pythons-logging-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Our Current Selections for Infrastructure
+      Python's Logging Module
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Our Current Selections for Infrastructure">
+    <nav class="md-nav" aria-label="Python&#39;s Logging Module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python-as-our-language" class="md-nav__link">
+  <a href="#installing" class="md-nav__link">
     <span class="md-ellipsis">
-      Python as our Language
+      Installing
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#document-parsing-and-chunking" class="md-nav__link">
+  <a href="#setup-logging-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Document parsing and chunking
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prompts-with-jinja-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompts with Jinja Templates
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-generative-ai-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choice of Generative AI Models
+      Setup Logging Config
     </span>
   </a>
   
@@ -1127,28 +1102,24 @@
 
 
 
-  <h1>Overview</h1>
+<h1 id="logging-with-pythons-standard-library"><strong>Logging with Python's Standard Library</strong><a class="headerlink" href="#logging-with-pythons-standard-library" title="Permanent link">&para;</a></h1>
+<p><strong>Date:</strong> March 6, 2025 <br />
+<strong>Author:</strong> sam-i-am</p>
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
 
-<p>Welcome to the Nanobot-Dev documentation User Guide Pages</p>
-<h2 id="our-current-selections-for-infrastructure">Our Current Selections for Infrastructure<a class="headerlink" href="#our-current-selections-for-infrastructure" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>As of 4/20/2025</p>
-</blockquote>
-<p>The current codebase aims to simplify some of the initial setup and modification of the basic steps of an application.  We have some boilerplate code that organized the steps of a RAG (Retrieval Augmented Generation) Generative AI system, and that has consolidated areas of code where one can modify the parameters of each module, simplyfying the use of the codebase.</p>
-<h3 id="python-as-our-language">Python as our Language<a class="headerlink" href="#python-as-our-language" title="Permanent link">&para;</a></h3>
-<p>Pyuthon is the standard language for most Generative AI applications, and is particullary easy to use. This module require <code>Python 3.12</code> or above.  </p>
-<h3 id="document-parsing-and-chunking">Document parsing and chunking<a class="headerlink" href="#document-parsing-and-chunking" title="Permanent link">&para;</a></h3>
-<p>We are currently using IBM's <a href="https://docling-project.github.io/docling/">Docling</a> which can be used to convert most general document formats (and even websites) into a format readable and usable to most Generative AI models.  In particular it is especially good at PDFs, and creates a Docling Document that seperatly identifies and extracts text, tables, pictures, document hierarchy with headers, sections and groups, and understands the content within the context of the page.  </p>
-<p>To start, we are extracting all the text and table and the provenance information (such as pages number, file name, and heading the information is part of)</p>
-<h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
-<p>We currently are using <a href="https://neon.tech">Neon.tech</a> for our Postgres database.  Postgres is an optimal solution at this early stage as postgres allows, via the <a href="https://github.com/pgvector/pgvector-python">pgvector plugin</a>, semantic similarity searches by vector arithmetic.  </p>
-<p>This choice to use <a href="">Neon.Tech</a> provides a web based solution, using the power of postgres and takes advantage of Neon's capability for data versioning and branching.</p>
-<h3 id="prompts-with-jinja-templates">Prompts with Jinja Templates<a class="headerlink" href="#prompts-with-jinja-templates" title="Permanent link">&para;</a></h3>
-<p>In this structure, we separate out the prompts for each call to the GenAI model so as to extract this from the working code, to make it more transparent, and to be able to easily modify the prompt for testing.</p>
-<p>The prompts are formatted and delivered to the model using Jinja templates, which also allows us to separate the functionality from the other Python code as well.  </p>
-<h3 id="choice-of-generative-ai-models">Choice of Generative AI Models<a class="headerlink" href="#choice-of-generative-ai-models" title="Permanent link">&para;</a></h3>
-<p>At this point we are using OpenAI for all aspects of our GenAI needs.  This includes using <code>4o</code> for the cleaning and formatting of the documents, the embedding of the vectors using , and <code>4o</code> for the chat completion steps.  </p>
-<p>This choice is currently determined by the quality and output of the model, and the ease of interacting with the API.  </p>
+<p>Logging, or tracking what happens as your code executes is pretty important to knowing what happened when things don't go as planned.  I have learned it is like inserting print statements in your code, but these statement can print out to the console (terminal or stdout), to a file, to an external logger (such as Logfire, which I will talk about in another post).  </p>
+<p>The bottom line is that you can write an awful lot of code in a notebook, or in small modules, and not have to track things.  But when things start getting big, with thousands of lines of code, you really need to be able to log what is going on especially to find bugs etc.  </p>
+<p>Plus, learning about logging makes you feel like a pro, like you have entered the big-time.  So lets get logging.  </p>
+<h2 id="pythons-logging-module"><strong>Python's Logging Module</strong><a class="headerlink" href="#pythons-logging-module" title="Permanent link">&para;</a></h2>
+<h3 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h3>
+<p>There is nothing to install, the logging module comes standard with Python!  You just need to add the following at the top of your files.<br />
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+</code></pre></div></p>
+<h3 id="setup-logging-config">Setup Logging Config<a class="headerlink" href="#setup-logging-config" title="Permanent link">&para;</a></h3>
+<p>So I started by following a few tutorials.  The one that helped me the most was from <strong>mCoding</strong> and called <strong>Modern Python Logging</strong>.  Click on thumbnail below to be redirected to the video.  </p>
+<p><a href="https://www.youtube.com/watch?v=9L77QExPmI0">
+  <img src="https://img.youtube.com/vi/9L77QExPmI0/maxresdefault.jpg" alt="Video Title" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</a></p>
 
 
 

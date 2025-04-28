@@ -321,13 +321,11 @@ Taken from the documents -- you will need to add a javascripts folder with the f
 
 ## Closing Comments
 
-Writing code is so much fun.  Learning new libraries in minutes is amazing fun.  Leaning how to document things and start writing in less than an hour and having it look good and be accessible --> INCREDIBLE good feeling.   
+Writing code is so much fun. Learning new libraries in minutes is amazing fun[^1]. Leaning how to document things and start writing in less than an hour and having it look good and be accessible --> INCREDIBLE good feeling[^2].
 
 This is a pretty sweet gig.  
 
 ### References
-
-[![MkDocs Tutorial](https://img.youtube.com/vi/xlABhbnNrfI/0.jpg)](https://www.youtube.com/watch?v=xlABhbnNrfI)
 
 [^1]: James Willet Dev [Full Tutorial To Build And Deploy Your Docs Portal](https://www.youtube.com/watch?v=xlABhbnNrfI)  https://www.youtube.com/watch?v=xlABhbnNrfI
 [^2]: James Willet Dev [Getting Started with Material for MkDocs](https://jameswillett.dev/getting-started-with-material-for-mkdocs/) -- _https://jameswillett.dev/getting-started-with-material-for-mkdocs/_

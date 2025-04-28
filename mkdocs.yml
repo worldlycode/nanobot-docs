@@ -9,8 +9,8 @@ docs_dir: docs
 theme:
   name: material
   font: 
-    text: Merriweather Sans
-    code: Red Hat Mono
+    text: Roboto
+    code: Roboto Mono
   # icon:
   #   logo: octicons/globe/16
   palette:
@@ -26,7 +26,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: black
       accent: indigo
       toggle:
         icon: material/brightness-4
