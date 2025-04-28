@@ -45,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -853,6 +853,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-import-a-module-from-within-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to import a module from within the package
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1056,6 +1065,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-import-a-module-from-within-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to import a module from within the package
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1092,14 +1110,16 @@
 <div class="highlight"><pre><span></span><code>pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 </code></pre></div></li>
 </ol>
+<hr />
 <h2 id="importing-and-using-local-packages">Importing and using local packages<a class="headerlink" href="#importing-and-using-local-packages" title="Permanent link">&para;</a></h2>
-<p>This is a good reference for importing packages:</p>
-<p><a href="https://www.youtube.com/watch?v=VEbuZox5qC4">
-  <img src="https://www.youtube.com/watch?v=VEbuZox5qC4/sddefault.jpg" alt="Video Title" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</a></p>
-<p>https://www.youtube.com/watch?v=VEbuZox5qC4</p>
-<p>Tech with Tim</p>
-<p>from the chunking.py file in the document_conversion folder, I want to import the Chunks and ChunkMetadata classes from the models.db_schemas module.</p>
+<p>This is a good reference for importing packages from a good python content creator with the following channel: <strong>Tech with Tim</strong>:</p>
+<div align="center">
+<p><a href="https://www.youtube.com/watch?v=VEbuZox5qC4"><img alt="Python Packages and Imports Tutorial" src="https://img.youtube.com/vi/VEbuZox5qC4/0.jpg" style="max-width: 400px; border: 3px solid #ccc; border-radius: 10px;" /></a></p>
+</div>
+<hr />
+<h2 id="how-to-import-a-module-from-within-the-package">How to import a module from within the package<a class="headerlink" href="#how-to-import-a-module-from-within-the-package" title="Permanent link">&para;</a></h2>
+<p>As an example:  </p>
+<p>From the chunking.py file in the document_conversion folder, I want to import the Chunks and ChunkMetadata classes from the models.db_schemas module.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">parent_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
