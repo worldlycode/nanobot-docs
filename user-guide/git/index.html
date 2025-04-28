@@ -1080,6 +1080,56 @@
 <p>There are various options 
 * create your own personal branch -- create a pull request in the development branch when your feature is tested
 * create a seperate directory called <code>/sandbox</code>.  Make certain your <code>.gitignore</code> file contains this folder so that it is not committed back to the repo before you are ready.  </p>
+<hr />
+<h1 id="collaboration-guidelines">🤝 Collaboration Guidelines<a class="headerlink" href="#collaboration-guidelines" title="Permanent link">&para;</a></h1>
+<h2 id="branch-protection-rules">Branch Protection Rules<a class="headerlink" href="#branch-protection-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The <code>main</code> branch is <strong>protected</strong>.</li>
+<li>All changes must be made via <strong>Pull Requests (PRs)</strong> — no direct pushes.</li>
+</ul>
+<h2 id="pull-request-requirements">Pull Request Requirements<a class="headerlink" href="#pull-request-requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Open a PR from your feature branch.</li>
+<li>At least <strong>1 approval</strong> is required before merging.</li>
+<li>All <strong>conversations and review comments must be resolved</strong> before merge.</li>
+<li>If you push new commits after approval, the PR will need a <strong>new approval</strong>.</li>
+<li>Keep your branch <strong>up-to-date with <code>main</code></strong> before merging.</li>
+</ul>
+<h2 id="merge-methods">Merge Methods<a class="headerlink" href="#merge-methods" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You may <strong>Merge</strong>, <strong>Squash</strong>, or <strong>Rebase</strong> your pull requests, depending on the situation.</li>
+<li><strong>Squash merging</strong> is encouraged for small, single-purpose changes to keep history clean.</li>
+</ul>
+<h2 id="admin-policy">Admin Policy<a class="headerlink" href="#admin-policy" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Only repository admins can bypass branch protections when necessary.</li>
+<li>Admins may push directly to <code>main</code> in rare cases (e.g., hotfixes).</li>
+</ul>
+<hr />
+<h1 id="best-practices">🧹 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Name branches clearly (e.g., <code>feature/add-login</code>, <code>fix/typo-readme</code>).</li>
+<li>Keep PRs focused and small when possible.</li>
+<li>Add a short description to your PR summarizing:</li>
+<li>What was changed</li>
+<li>Why the change is needed</li>
+<li>Any testing or review notes</li>
+</ul>
+<hr />
+<h1 id="quick-pr-template-optional">✅ Quick PR Template (Optional)<a class="headerlink" href="#quick-pr-template-optional" title="Permanent link">&para;</a></h1>
+<p>When opening a Pull Request, include:</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Summary</span>
+<span class="k">-</span><span class="w"> </span>[Short description of the change]
+
+<span class="gu">## Testing</span>
+<span class="k">-</span><span class="w"> </span>[How you tested it]
+
+<span class="gu">## Review</span>
+<span class="k">-</span><span class="w"> </span>[Anything reviewers should focus on]
+</code></pre></div>
+<hr />
+<h1 id="thank-you-for-contributing">🚀 Thank you for contributing!<a class="headerlink" href="#thank-you-for-contributing" title="Permanent link">&para;</a></h1>
+<hr />
 
 
 
