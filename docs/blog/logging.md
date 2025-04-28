@@ -1,7 +1,6 @@
 # **Logging with Python's Standard Library**
 
-
-**Date:** March 6, 2025  
+**Date:** March 6, 2025   
 **Author:** sam-i-am
 
 <pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
@@ -31,55 +30,3 @@ So I started by following a few tutorials.  The one that helped me the most was 
 </a>
 
 
-[Main content goes here. You can include links like this: [Link Text](https://example.com)]
-
-> NOTE: [Use blockquotes for important notes or callouts]
-
-### [Another Subsection]
-
-
-
-
-
-
-[More content here. Feel free to include code samples:]
-
-
-
-```python
-# Example code
-def hello_world():
-    print("Hello World! 🌐")
-```
-
-```bash
-mkdocs serve
-```
-
-## [Another Main Section]
-
-[Continue with more content as needed]
-
-### [Technical Details]
-
-[If applicable, include technical details, steps, or instructions]
-
-```bash
-# Example command
-command --option value
-```
-
-#### [Detailed Subsection]
-
-[Add more detailed information if necessary]
-
-> #### Important Notes
-> * [First important point]  
-> * [Second important point]  
-> * [Third important point]
-
-## Closing Thoughts
-
-[Summarize what you've covered and include any final thoughts or future directions]
-
-[Optional: Add a fun closing remark or personal touch]

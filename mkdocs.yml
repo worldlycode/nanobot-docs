@@ -87,7 +87,7 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - User Guide:
-    - Overview: user-guide/00_index.md
+    - Overview: user-guide/00-index-user-guide.md
     - What is in Utils: user-guide/utils.md
     - Setting up Logfire: user-guide/logfire.md
     - Coding with Tests: user-guide/tests.md
@@ -95,12 +95,13 @@ nav:
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - Blog: 
-    - Overview: blog/index.md
+    - Welcome!: blog/00-index-blog.md
+    - Choosing MkDocs: blog/mkdocs.md    
     - Markdown Cheatsheet: blog/markdown.md
-    - Choosing MkDocs: blog/mkdocs-2025-03-08.md
     - Understanding Docling: blog/docling.md
-    - Learning about Logging: blog/logging-2025-03-06.md
+    - Logging with Python: blog/logging.md
     - Packages and Imports: blog/packages-and-imports.md
+    - Configuring pgAdmin: blog/pgadmin.md
 
   - API Reference:
     - Database: api/database.md

@@ -1,9 +1,9 @@
 # **Starting with MkDocs - Love at first use**
 
-**Date:** March 8, 2025  
+**Date:** March 8, 2025    
 **Author:** sam-i-am
 
-## Hello World! 🌐
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
 ---
 
 I am sitting here in the St Agnus NYPL Library, where I spent a lot of the past week, writing code.  This has been an incredible journey.  It was only 6 days ago, that I took the time to try and understand how to use Cursor, the VSCode AI developer IDE.  [With Cursor] I have written about 3000 lines of working code, developing the pipeline for Nanobot.  
@@ -326,6 +326,9 @@ Writing code is so much fun.  Learning new libraries in minutes is amazing fun. 
 This is a pretty sweet gig.  
 
 ### References
+
+[![MkDocs Tutorial](https://img.youtube.com/vi/xlABhbnNrfI/0.jpg)](https://www.youtube.com/watch?v=xlABhbnNrfI)
+
 [^1]: James Willet Dev [Full Tutorial To Build And Deploy Your Docs Portal](https://www.youtube.com/watch?v=xlABhbnNrfI)  https://www.youtube.com/watch?v=xlABhbnNrfI
 [^2]: James Willet Dev [Getting Started with Material for MkDocs](https://jameswillett.dev/getting-started-with-material-for-mkdocs/) -- _https://jameswillett.dev/getting-started-with-material-for-mkdocs/_
 

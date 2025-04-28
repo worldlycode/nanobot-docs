@@ -25,7 +25,7 @@ It is our hope by doing so, that we not only create a cohesive codebase with fun
 ## Quick Navigation
 
 - [Getting Started](getting-started.md) - Installation and basic setup
-- [User Guide](user-guide/00_index.md) - Detailed usage instructions
+- [User Guide](user-guide/00-index-user-guide.md) - Detailed usage instructions
 - [API Reference](api/database.md) - Technical reference for developers
 - [Examples](examples.md) - Code examples and tutorials
 

@@ -28,7 +28,11 @@ pipreqs . --force
 
 ## Importing and using local packages
 
-his is a good reference for importing packages:
+This is a good reference for importing packages:
+
+<a href="https://www.youtube.com/watch?v=VEbuZox5qC4">
+  <img src="https://www.youtube.com/watch?v=VEbuZox5qC4/sddefault.jpg" alt="Video Title" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</a>
 
 https://www.youtube.com/watch?v=VEbuZox5qC4
 

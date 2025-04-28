@@ -1,15 +1,18 @@
-# Learning Markdown
-
-Markdown is the best documentation language to use, as it is essentially plain text with some basic formatting.  This makes it usable everywhere, and you are then beholden to no-one for your documents.  There are manny applications that can render markdown format, many of them open source.  
-
-Here is a quick 
-
-Here’s a **clean version** with a simple **Table of Contents (TOC)** at the top — perfect for MkDocs.
-
----
 # 📄 Markdown Cheatsheet
 
-## Table of Contents
+**Date:** April 27, 2025    
+**Author:** sam-i-am
+
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
+
+Markdown is a *lightweight* markup language.  It is a way to annotate plain text to indicate formating (like headings, bold, links etc), without writing full HTML tags.  
+
+It results in nicely rendered plain text, is simple, and totally yours to do what you want with.  We are using Mkdocs for our documentation, which creates a site from markdown files.  
+
+If you are not familiar with markdown, dont worry!  Below is a simple cheatsheet to help you along.  At the very bottom of this page there is also some links to other resources.  
+
+## TOC
+
 - [Headings](#headings)
 - [Emphasis](#emphasis)
 - [Lists](#lists)
@@ -22,7 +25,7 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Headings
+## Headings
 
 ```markdown
 # Heading 1
@@ -38,7 +41,7 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Emphasis
+## Emphasis
 
 ```markdown
 *Italic*  
@@ -54,23 +57,23 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Lists
+## Lists
 
-## Unordered List
+### Unordered List
 
 ```markdown
 - Item 1
 - Item 2
-  - Subitem 2a
-  - Subitem 2b
+    - Subitem 2a
+    - Subitem 2b
 ```
 
 - Item 1
 - Item 2
-  - Subitem 2a
-  - Subitem 2b
+    - Subitem 2a
+    - Subitem 2b
 
-## Ordered List
+### Ordered List
 
 ```markdown
 1. First
@@ -84,7 +87,7 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Links
+## Links
 
 ```markdown
 [Link Text](https://example.com)
@@ -94,7 +97,7 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Images
+## Images
 
 ```markdown
 ![Alt Text](https://via.placeholder.com/150)
@@ -104,9 +107,9 @@ Here’s a **clean version** with a simple **Table of Contents (TOC)** at the to
 
 ---
 
-# Code
+## Code
 
-## Inline Code
+### Inline Code
 
 ```markdown
 Here is `inline code`.
@@ -114,7 +117,7 @@ Here is `inline code`.
 
 Here is `inline code`.
 
-## Code Block
+### Code Block
 Use tripple backticks
 
 
@@ -126,7 +129,9 @@ def hello():
 ```
 
 
-# Blockquote
+---
+
+## Blockquote
 
 ```markdown
 > This is a blockquote.
@@ -138,7 +143,7 @@ def hello():
 
 ---
 
-# Horizontal Line
+## Horizontal Line
 
 ```markdown
 ---
@@ -147,24 +152,22 @@ def hello():
 ---
 
 
-# References and Links
+## References and Links
 
-1. Markdown Guide (Basic Syntax)
-
-📄 https://www.markdownguide.org/basic-syntax/
+* 📄 [Markdown Guide - Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 
 Extremely clear and focused just on the main things: headings, bold, italic, lists, links, images, code, blockquotes.
 
-2. GitHub Markdown Cheatsheet
-
-📄 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* 📄 [Github Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 A little bit longer but very practical — shows both the syntax and examples side-by-side.
 
-3. Markdown Tutorial (Interactive)
-
-📄 https://www.markdowntutorial.com/
+* 📄 [Interactive markdown Tutorial](https://www.markdowntutorial.com/)
 
 If you like practice-as-you-learn, this one is great. It walks you through very short lessons where you type Markdown directly into the page.
 
+---
+
 # ✅ End of Cheatsheet
+
+---
