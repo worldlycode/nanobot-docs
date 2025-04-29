@@ -85,7 +85,9 @@ plugins:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Setup:
+    - Installation: setup/00-index-setup.md
+    - Environment Variables: setup/10-env-config.md
   - User Guide:
     - Overview: user-guide/00-index-user-guide.md
     - What is in Utils: user-guide/utils.md
@@ -94,6 +96,10 @@ nav:
     - Collaborating with Git: user-guide/git.md
     - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
+  - API Reference:
+    - Database: api/database.md
+    - Services: api/services.md
+  - Examples: examples.md
   - Blog: 
     - Welcome!: blog/00-index-blog.md
     - Choosing MkDocs: blog/mkdocs.md    
@@ -103,10 +109,6 @@ nav:
     - Packages and Imports: blog/packages-and-imports.md
     - Configuring pgAdmin: blog/pgadmin.md
 
-  - API Reference:
-    - Database: api/database.md
-    - Services: api/services.md
-  - Examples: examples.md
 extra:
   social:
     - icon: fontawesome/brands/github

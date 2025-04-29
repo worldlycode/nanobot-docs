@@ -1082,53 +1082,63 @@
 * create a seperate directory called <code>/sandbox</code>.  Make certain your <code>.gitignore</code> file contains this folder so that it is not committed back to the repo before you are ready.  </p>
 <hr />
 <h1 id="collaboration-guidelines">🤝 Collaboration Guidelines<a class="headerlink" href="#collaboration-guidelines" title="Permanent link">&para;</a></h1>
-<h2 id="branch-protection-rules">Branch Protection Rules<a class="headerlink" href="#branch-protection-rules" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>DISCLAIMER</strong> Below was written by ChatGPT.  I did ask it to be friendly and warm! :-D  </p>
+</blockquote>
+<h2 id="working-together">Working Together<a class="headerlink" href="#working-together" title="Permanent link">&para;</a></h2>
+<p>To help us keep the project organized and high-quality, we follow a few lightweight practices:</p>
 <ul>
-<li>The <code>main</code> branch is <strong>protected</strong>.</li>
-<li>All changes must be made via <strong>Pull Requests (PRs)</strong> — no direct pushes.</li>
+<li>The <code>main</code> branch is <strong>protected</strong> to ensure stable and reliable code.</li>
+<li>Changes should come through <strong>Pull Requests (PRs)</strong> — it's the best way to review and improve together.</li>
+<li>Direct pushes to <code>main</code> are restricted to keep history clean and traceable.</li>
 </ul>
-<h2 id="pull-request-requirements">Pull Request Requirements<a class="headerlink" href="#pull-request-requirements" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="opening-pull-requests">Opening Pull Requests<a class="headerlink" href="#opening-pull-requests" title="Permanent link">&para;</a></h2>
+<p>When opening a PR:</p>
 <ul>
-<li>Open a PR from your feature branch.</li>
-<li>At least <strong>1 approval</strong> is required before merging.</li>
-<li>All <strong>conversations and review comments must be resolved</strong> before merge.</li>
-<li>If you push new commits after approval, the PR will need a <strong>new approval</strong>.</li>
-<li>Keep your branch <strong>up-to-date with <code>main</code></strong> before merging.</li>
+<li>Start from a feature branch.</li>
+<li>One <strong>peer approval</strong> is encouraged before merging.</li>
+<li>Please resolve any open review comments or conversations.</li>
+<li>If new commits are added after approval, a quick re-approval helps keep reviews up to date.</li>
+<li>Keep your branch <strong>in sync with <code>main</code></strong> to avoid conflicts.</li>
 </ul>
-<h2 id="merge-methods">Merge Methods<a class="headerlink" href="#merge-methods" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="merging-options">Merging Options<a class="headerlink" href="#merging-options" title="Permanent link">&para;</a></h2>
+<p>You are free to choose the merge method that fits best:</p>
 <ul>
-<li>You may <strong>Merge</strong>, <strong>Squash</strong>, or <strong>Rebase</strong> your pull requests, depending on the situation.</li>
-<li><strong>Squash merging</strong> is encouraged for small, single-purpose changes to keep history clean.</li>
+<li><strong>Merge</strong>, <strong>Squash</strong>, or <strong>Rebase</strong> are all supported.</li>
+<li><strong>Squash merging</strong> is recommended for small or self-contained changes to keep commit history tidy.</li>
 </ul>
-<h2 id="admin-policy">Admin Policy<a class="headerlink" href="#admin-policy" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="stewardship">Stewardship<a class="headerlink" href="#stewardship" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Only repository admins can bypass branch protections when necessary.</li>
-<li>Admins may push directly to <code>main</code> in rare cases (e.g., hotfixes).</li>
+<li>Admins help guide the project and can bypass branch protections if necessary.</li>
+<li>Day-to-day contributions, reviews, and merges are open and collaborative.</li>
 </ul>
 <hr />
 <h1 id="best-practices">🧹 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Name branches clearly (e.g., <code>feature/add-login</code>, <code>fix/typo-readme</code>).</li>
-<li>Keep PRs focused and small when possible.</li>
-<li>Add a short description to your PR summarizing:</li>
+<li>Name branches clearly (e.g., <code>feature/login-page</code>, <code>fix/readme-typo</code>).</li>
+<li>Try to keep PRs focused on a single topic or improvement.</li>
+<li>Include a short description in your PR:</li>
 <li>What was changed</li>
-<li>Why the change is needed</li>
-<li>Any testing or review notes</li>
+<li>Why it was needed</li>
+<li>How it was tested</li>
 </ul>
 <hr />
-<h1 id="quick-pr-template-optional">✅ Quick PR Template (Optional)<a class="headerlink" href="#quick-pr-template-optional" title="Permanent link">&para;</a></h1>
-<p>When opening a Pull Request, include:</p>
+<h1 id="quick-pull-request-template-optional">✅ Quick Pull Request Template (Optional)<a class="headerlink" href="#quick-pull-request-template-optional" title="Permanent link">&para;</a></h1>
+<p>When opening a Pull Request, feel free to use:</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Summary</span>
-<span class="k">-</span><span class="w"> </span>[Short description of the change]
+<span class="k">-</span><span class="w"> </span>[What does this change do?]
 
 <span class="gu">## Testing</span>
-<span class="k">-</span><span class="w"> </span>[How you tested it]
+<span class="k">-</span><span class="w"> </span>[How was this verified?]
 
 <span class="gu">## Review</span>
-<span class="k">-</span><span class="w"> </span>[Anything reviewers should focus on]
+<span class="k">-</span><span class="w"> </span>[Anything specific you&#39;d like reviewers to focus on?]
 </code></pre></div>
 <hr />
-<h1 id="thank-you-for-contributing">🚀 Thank you for contributing!<a class="headerlink" href="#thank-you-for-contributing" title="Permanent link">&para;</a></h1>
+<h1 id="thank-you-for-contributing-and-helping-the-project-grow">🚀 Thank you for contributing and helping the project grow!<a class="headerlink" href="#thank-you-for-contributing-and-helping-the-project-grow" title="Permanent link">&para;</a></h1>
 <hr />
 
 
