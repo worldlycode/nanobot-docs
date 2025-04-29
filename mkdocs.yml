@@ -87,11 +87,15 @@ nav:
   - Home: index.md
   - Setup:
     - Installation: setup/00-index-setup.md
-    - Environment Variables: setup/10-env-config.md
+    - 01-Environment Variables: setup/env-config.md
+    - 02-Logfire: setup/logfire-setup.md
+    - 03-Neon: setup/neon-setup.md
+    - 04-Local Database: setup/postgres-local-setup.md
+    - 05-Database Tables: setup/database-table-setup.md
+    - 06-Running NanoBot: setup/running-nanobot.md
   - User Guide:
     - Overview: user-guide/00-index-user-guide.md
     - What is in Utils: user-guide/utils.md
-    - Setting up Logfire: user-guide/logfire.md
     - Coding with Tests: user-guide/tests.md
     - Collaborating with Git: user-guide/git.md
     - Document Processing: user-guide/document-processing.md
