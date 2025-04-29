@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/user-guide/logfire/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/setup/postgres-local-setup/">
       
       
-        <link rel="prev" href="../utils/">
+        <link rel="prev" href="../neon-setup/">
       
       
-        <link rel="next" href="../tests/">
+        <link rel="next" href="../database-table-setup/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Setting up Logfire - NanoBot-Dev Documentation 🤖</title>
+        <title>04-Local Database - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-pydantic-logfire" class="md-skip">
+        <a href="#local-posgresql-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting up Logfire
+              04-Local Database
             
           </span>
         </div>
@@ -230,11 +230,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../setup/00-index-setup/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-setup/" class="md-tabs__link">
           
   
   
@@ -250,13 +252,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-index-user-guide/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../user-guide/00-index-user-guide/" class="md-tabs__link">
           
   
   
@@ -386,28 +386,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -420,7 +423,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -434,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/00-index-setup/" class="md-nav__link">
+      <a href="../00-index-setup/" class="md-nav__link">
         
   
   
@@ -457,90 +460,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/10-env-config/" class="md-nav__link">
+      <a href="../env-config/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Environment Variables
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    User Guide
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            User Guide
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-index-user-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
+    01-Environment Variables
     
   </span>
   
@@ -558,12 +483,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../logfire-setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    What is in Utils
+    02-Logfire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neon-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03-Neon
     
   </span>
   
@@ -595,7 +543,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up Logfire
+    04-Local Database
     
   </span>
   
@@ -614,7 +562,151 @@
   
   
     <li class="md-nav__item">
-      <a href="../tests/" class="md-nav__link">
+      <a href="../database-table-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05-Database Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-nanobot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06-Running NanoBot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/00-index-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is in Utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/tests/" class="md-nav__link">
         
   
   
@@ -637,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../user-guide/git/" class="md-nav__link">
         
   
   
@@ -660,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document-processing/" class="md-nav__link">
+      <a href="../../user-guide/document-processing/" class="md-nav__link">
         
   
   
@@ -683,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector-search/" class="md-nav__link">
+      <a href="../../user-guide/vector-search/" class="md-nav__link">
         
   
   
@@ -1073,24 +1165,16 @@
 
 
 
-<h1 id="setting-up-pydantic-logfire">Setting up Pydantic Logfire<a class="headerlink" href="#setting-up-pydantic-logfire" title="Permanent link">&para;</a></h1>
-<p>Logfire by Pydantic is used to record the interaction between the LLM and the application.  Using Logfire one is able to see what is being passed to the model, and what the model is returning.  Additionally you can also see the length of timeeach call takes.  </p>
-<p>To Use the Nanobot-Dev codebase without modification you will need to configure a Logfire account.  The can be used at no charge for a ridicolous number of calls, (10 million free spans/metrics per month).  </p>
-<p>Follow these steps:</p>
-<ol>
-<li>Go to the main website at https://pydantic.dev/logfire and create an account</li>
-<li>Log into Logfire</li>
-<li>Go to the Projects Page and creeate a new project.  </li>
-<li>Generate a <code>write token</code> and save it for future use</li>
-<li>Copy the logfire token into your <code>.eve</code> file.  Do not use brackets or quotes or spaces.</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code>LOGFIRE_TOKEN=[YOUR_TOKEN_HERE] 
-</code></pre></div>
-This is what the project page looks like. </p>
-<p><img alt="logfire_project_page" src="../../assets/images/logfire_project_view.png" /></p>
-<p>In order to see the live updates you will want to click on the <code>Live</code> tab at the top toolbar of the page.  Each time you make an LLM Call from your application, it will update here in the live view.  You can also search all history going up to 30 days back.</p>
-<p>A call in the live view looks like the following image.</p>
-<p><img alt="logfire_project_page" src="../../assets/images/logfire_live_view.png" /></p>
+<h1 id="local-posgresql-setup">Local PosgreSQL Setup<a class="headerlink" href="#local-posgresql-setup" title="Permanent link">&para;</a></h1>
+<p>This is a total work under construction -- </p>
+<p>Maybe should just refer people to setup pages for their particular OS:</p>
+<ul>
+<li>Mac-OS</li>
+<li>LInux</li>
+<li>WIndows</li>
+<li>WSL (Windows subsystem on linux)</li>
+</ul>
+<p>In theory, if they want to serve this as an application, they should either deploy through a Docker VM or Neon, or similar cloud instance...</p>
 
 
 

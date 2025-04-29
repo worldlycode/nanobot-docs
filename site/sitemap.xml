@@ -57,7 +57,27 @@
          <lastmod>2025-04-29</lastmod>
     </url>
     <url>
-         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/10-env-config/</loc>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/database-table-setup/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/env-config/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/logfire-setup/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/neon-setup/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/postgres-local-setup/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://worldlycode.github.io/nanobot-dev-docs/setup/running-nanobot/</loc>
          <lastmod>2025-04-29</lastmod>
     </url>
     <url>
@@ -70,10 +90,6 @@
     </url>
     <url>
          <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/git/</loc>
-         <lastmod>2025-04-29</lastmod>
-    </url>
-    <url>
-         <loc>https://worldlycode.github.io/nanobot-dev-docs/user-guide/logfire/</loc>
          <lastmod>2025-04-29</lastmod>
     </url>
     <url>

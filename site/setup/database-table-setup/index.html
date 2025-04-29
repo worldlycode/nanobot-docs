@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/blog/00-index-blog/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/setup/database-table-setup/">
       
       
-        <link rel="prev" href="../../examples/">
+        <link rel="prev" href="../postgres-local-setup/">
       
       
-        <link rel="next" href="../mkdocs/">
+        <link rel="next" href="../running-nanobot/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Welcome! - NanoBot-Dev Documentation 🤖</title>
+        <title>05-Database Tables - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello-world" class="md-skip">
+        <a href="#initializing-your-database" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome!
+              05-Database Tables
             
           </span>
         </div>
@@ -230,11 +230,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../setup/00-index-setup/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-setup/" class="md-tabs__link">
           
   
   
@@ -309,13 +311,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../blog/00-index-blog/" class="md-tabs__link">
           
   
   
@@ -386,28 +386,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -420,7 +423,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -434,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/00-index-setup/" class="md-nav__link">
+      <a href="../00-index-setup/" class="md-nav__link">
         
   
   
@@ -457,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/env-config/" class="md-nav__link">
+      <a href="../env-config/" class="md-nav__link">
         
   
   
@@ -480,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/logfire-setup/" class="md-nav__link">
+      <a href="../logfire-setup/" class="md-nav__link">
         
   
   
@@ -503,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/neon-setup/" class="md-nav__link">
+      <a href="../neon-setup/" class="md-nav__link">
         
   
   
@@ -526,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/postgres-local-setup/" class="md-nav__link">
+      <a href="../postgres-local-setup/" class="md-nav__link">
         
   
   
@@ -546,10 +549,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../setup/database-table-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    05-Database Tables
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -560,6 +585,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -572,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/running-nanobot/" class="md-nav__link">
+      <a href="../running-nanobot/" class="md-nav__link">
         
   
   
@@ -909,31 +963,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -946,7 +997,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -957,19 +1008,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../blog/00-index-blog/" class="md-nav__link">
         
   
   
@@ -980,7 +1022,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -993,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/" class="md-nav__link">
+      <a href="../../blog/mkdocs/" class="md-nav__link">
         
   
   
@@ -1016,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/" class="md-nav__link">
+      <a href="../../blog/markdown/" class="md-nav__link">
         
   
   
@@ -1039,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docling/" class="md-nav__link">
+      <a href="../../blog/docling/" class="md-nav__link">
         
   
   
@@ -1062,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logging/" class="md-nav__link">
+      <a href="../../blog/logging/" class="md-nav__link">
         
   
   
@@ -1085,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../packages-and-imports/" class="md-nav__link">
+      <a href="../../blog/packages-and-imports/" class="md-nav__link">
         
   
   
@@ -1108,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pgadmin/" class="md-nav__link">
+      <a href="../../blog/pgadmin/" class="md-nav__link">
         
   
   
@@ -1151,6 +1192,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1165,13 +1223,15 @@
 
 
 
-<h1 id="hello-world">Hello World 🌐<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h1>
-<p>Welcome to the NanoBot-Dev development blog! </p>
-<p>Here our team will share updates, insights, and lessons learned while building this project.  </p>
-<blockquote>
-<p>Our motto:  Teach it to keep it!</p>
-</blockquote>
-<p>Click through the topics in the left sidebar to learn more.  </p>
+<h1 id="initializing-your-database">Initializing your Database<a class="headerlink" href="#initializing-your-database" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Toggle switch in your environment file or in <code>app.config.settings.py</code> to be local or Neon.  </li>
+<li>runn the code to set up the tables in the chosen location</li>
+<li>Import sample data</li>
+<li>Have a script that tests this sample data</li>
+</ul>
+<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
+<p>Setup a json or a csv (to be read by pandas) with some sample data to test and load into the database for testing once configured .</p>
 
 
 

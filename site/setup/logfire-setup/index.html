@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/setup/10-env-config/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/setup/logfire-setup/">
       
       
-        <link rel="prev" href="../00-index-setup/">
+        <link rel="prev" href="../env-config/">
       
       
-        <link rel="next" href="../../user-guide/00-index-user-guide/">
+        <link rel="next" href="../neon-setup/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Environment Variables - NanoBot-Dev Documentation 🤖</title>
+        <title>02-Logfire - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-the-env-file" class="md-skip">
+        <a href="#setting-up-pydantic-logfire" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Variables
+              02-Logfire
             
           </span>
         </div>
@@ -457,6 +457,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01-Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -474,13 +497,105 @@
   
   
   <span class="md-ellipsis">
-    Environment Variables
+    02-Logfire
     
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neon-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03-Neon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgres-local-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04-Local Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-table-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05-Database Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-nanobot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06-Running NanoBot
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -574,29 +689,6 @@
   
   <span class="md-ellipsis">
     What is in Utils
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user-guide/logfire/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Setting up Logfire
     
   </span>
   
@@ -1073,7 +1165,24 @@
 
 
 
-<h1 id="setting-up-the-env-file">Setting up the <code>.env</code> file<a class="headerlink" href="#setting-up-the-env-file" title="Permanent link">&para;</a></h1>
+<h1 id="setting-up-pydantic-logfire">Setting up Pydantic Logfire<a class="headerlink" href="#setting-up-pydantic-logfire" title="Permanent link">&para;</a></h1>
+<p>Logfire by Pydantic is used to record the interaction between the LLM and the application.  Using Logfire one is able to see what is being passed to the model, and what the model is returning.  Additionally you can also see the length of timeeach call takes.  </p>
+<p>To Use the Nanobot-Dev codebase without modification you will need to configure a Logfire account.  The can be used at no charge for a ridicolous number of calls, (10 million free spans/metrics per month).  </p>
+<p>Follow these steps:</p>
+<ol>
+<li>Go to the main website at https://pydantic.dev/logfire and create an account</li>
+<li>Log into Logfire</li>
+<li>Go to the Projects Page and creeate a new project.  </li>
+<li>Generate a <code>write token</code> and save it for future use</li>
+<li>Copy the logfire token into your <code>.eve</code> file.  Do not use brackets or quotes or spaces.</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>LOGFIRE_TOKEN=[YOUR_TOKEN_HERE] 
+</code></pre></div>
+This is what the project page looks like. </p>
+<p><img alt="logfire_project_page" src="../../assets/images/logfire_project_view.png" /></p>
+<p>In order to see the live updates you will want to click on the <code>Live</code> tab at the top toolbar of the page.  Each time you make an LLM Call from your application, it will update here in the live view.  You can also search all history going up to 30 days back.</p>
+<p>A call in the live view looks like the following image.</p>
+<p><img alt="logfire_project_page" src="../../assets/images/logfire_live_view.png" /></p>
 
 
 
