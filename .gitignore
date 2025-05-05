@@ -1,3 +1,6 @@
 /.venv/
 .venv/
 requirements.txt.bak
+
+/site/
+site/
