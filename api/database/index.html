@@ -849,6 +849,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -860,6 +873,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-database-transaction-management-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Database Transaction Management Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-imports-and-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Imports and Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-custom-exception-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Custom Exception Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-main-transaction-context-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. The Main Transaction Context Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-transaction-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Transaction Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-setting-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Setting Timeout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-yielding-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Yielding the Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-committing-the-transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Committing the Transaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-handling-connection-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Handling Connection Errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-handling-other-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Handling Other Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Cleanup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-helper-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Helper Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Usage Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1151,6 +1300,131 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-database-transaction-management-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Database Transaction Management Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-imports-and-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Imports and Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-custom-exception-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Custom Exception Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-main-transaction-context-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. The Main Transaction Context Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-transaction-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Transaction Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-setting-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Setting Timeout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-yielding-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Yielding the Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-committing-the-transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Committing the Transaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-handling-connection-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Handling Connection Errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-handling-other-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Handling Other Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Cleanup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-helper-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Helper Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Usage Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1166,6 +1440,227 @@
 
 
 <h1 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h1>
+<h2 id="understanding-the-database-transaction-management-code">Understanding the Database Transaction Management Code<a class="headerlink" href="#understanding-the-database-transaction-management-code" title="Permanent link">&para;</a></h2>
+<p><strong>This code is in <code>/database/transaction.py</code> but is not yet implemented except in the <code>/tests/</code> directory</strong></p>
+<p>Let's break down this transaction management code step by step:</p>
+<h2 id="1-imports-and-setup">1. Imports and Setup<a class="headerlink" href="#1-imports-and-setup" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">psycopg2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">app.database.db_common</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_connection</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">app.config.settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
+
+<span class="c1"># Configure logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+<p>This section:
+- Imports necessary libraries (time for measuring duration, logging for feedback)
+- Sets up a logger for this module</p>
+<h2 id="2-custom-exception-classes">2. Custom Exception Classes<a class="headerlink" href="#2-custom-exception-classes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TransactionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception raised for transaction-related errors.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TransactionTimeout</span><span class="p">(</span><span class="n">TransactionError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception raised when a transaction times out.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p>These are custom exception classes:
+- <code>TransactionError</code>: A general error for any transaction problems
+- <code>TransactionTimeout</code>: A specific error for when transactions take too long (inherits from TransactionError)</p>
+<h2 id="3-the-main-transaction-context-manager">3. The Main Transaction Context Manager<a class="headerlink" href="#3-the-main-transaction-context-manager" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">transaction</span><span class="p">(</span>
+    <span class="n">use_neon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">feedback</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_rollback</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">):</span>
+</code></pre></div>
+<p>This is a context manager (used with <code>with</code> statements) that:
+- Takes parameters to control behavior:
+  - <code>use_neon</code>: Whether to use Neon database (overrides settings)
+  - <code>timeout</code>: Maximum seconds to allow for the transaction
+  - <code>feedback</code>: Whether to log what's happening
+  - <code>auto_rollback</code>: Whether to automatically rollback on errors</p>
+<h2 id="4-transaction-setup">4. Transaction Setup<a class="headerlink" href="#4-transaction-setup" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">db_type</span> <span class="o">=</span> <span class="s2">&quot;Neon&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">use_neon</span> <span class="k">if</span> <span class="n">use_neon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">settings</span><span class="o">.</span><span class="n">use_neon</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;local&quot;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Get database connection</span>
+    <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting transaction with </span><span class="si">{</span><span class="n">db_type</span><span class="si">}</span><span class="s2"> database&quot;</span><span class="p">)</span>
+
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">get_connection</span><span class="p">(</span><span class="n">use_neon</span><span class="o">=</span><span class="n">use_neon</span><span class="p">)</span>
+</code></pre></div>
+<p>This part:
+- Initializes variables (connection and start time)
+- Determines which database to use
+- Logs the start of the transaction (if feedback is enabled)
+- Gets a database connection</p>
+<h2 id="5-setting-timeout">5. Setting Timeout<a class="headerlink" href="#5-setting-timeout" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set timeout if specified</span>
+<span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">timeout</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># Set statement timeout in milliseconds</span>
+    <span class="k">with</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cur</span><span class="p">:</span>
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">timeout</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This sets a PostgreSQL statement timeout if one was specified:
+- Converts seconds to milliseconds
+- Tells PostgreSQL to abort any statement that takes longer than this time</p>
+<h2 id="6-yielding-the-connection">6. Yielding the Connection<a class="headerlink" href="#6-yielding-the-connection" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Yield connection to the caller</span>
+<span class="k">yield</span> <span class="n">conn</span>
+</code></pre></div>
+<p>This is where the context manager pauses and gives control to the code inside the <code>with</code> block.
+- The connection is passed to your code to use
+- When your code finishes, execution continues after this line</p>
+<h2 id="7-committing-the-transaction">7. Committing the Transaction<a class="headerlink" href="#7-committing-the-transaction" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check timeout before committing</span>
+<span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">timeout</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">TransactionTimeout</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction timed out after </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+
+<span class="c1"># Commit the transaction</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction committed successfully (</span><span class="si">{</span><span class="n">duration</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">s)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>After your code finishes:
+- It checks if we've exceeded the timeout
+- If not, it commits the transaction (saves changes to the database)
+- Logs the successful commit with duration</p>
+<h2 id="8-handling-connection-errors">8. Handling Connection Errors<a class="headerlink" href="#8-handling-connection-errors" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">OperationalError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;statement timeout&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction timed out after </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">TransactionTimeout</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Database operation timed out after </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+
+    <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Database connection error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">conn</span> <span class="ow">and</span> <span class="n">auto_rollback</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Transaction rolled back due to connection error&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">rollback_error</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to rollback transaction: </span><span class="si">{</span><span class="n">rollback_error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">raise</span> <span class="n">TransactionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Database connection error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+</code></pre></div>
+<p>This handles database connection errors:
+- Checks if it's a timeout error
+- Logs the error
+- Rolls back the transaction if auto_rollback is enabled
+- Raises a custom exception</p>
+<h2 id="9-handling-other-exceptions">9. Handling Other Exceptions<a class="headerlink" href="#9-handling-other-exceptions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+
+    <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction failed after </span><span class="si">{</span><span class="n">duration</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">s: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">conn</span> <span class="ow">and</span> <span class="n">auto_rollback</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Transaction rolled back due to error&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">rollback_error</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to rollback transaction: </span><span class="si">{</span><span class="n">rollback_error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Re-raise the original exception</span>
+    <span class="k">raise</span>
+</code></pre></div>
+<p>This handles any other exceptions:
+- Logs the error with duration
+- Rolls back the transaction if auto_rollback is enabled
+- Re-raises the original exception</p>
+<h2 id="10-cleanup">10. Cleanup<a class="headerlink" href="#10-cleanup" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Close connection in finally block to ensure it happens</span>
+    <span class="k">if</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Database connection closed&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">close_error</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">feedback</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error closing database connection: </span><span class="si">{</span><span class="n">close_error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This cleanup always runs:
+- Closes the database connection
+- Logs any errors that occur during closing</p>
+<h2 id="11-helper-function">11. Helper Function<a class="headerlink" href="#11-helper-function" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">execute_with_transaction</span><span class="p">(</span>
+    <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="n">use_neon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">feedback</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_rollback</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</code></pre></div>
+<p>This is a helper function that:
+- Takes a function and its arguments
+- Takes the same transaction parameters
+- Executes the function within a transaction</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">transaction</span><span class="p">(</span>
+    <span class="n">use_neon</span><span class="o">=</span><span class="n">use_neon</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+    <span class="n">feedback</span><span class="o">=</span><span class="n">feedback</span><span class="p">,</span>
+    <span class="n">auto_rollback</span><span class="o">=</span><span class="n">auto_rollback</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+<p>It:
+- Creates a transaction using the context manager
+- Calls your function with the connection and other arguments
+- Returns whatever your function returns</p>
+<p>This helper makes it easier to use transactions without writing the <code>with</code> statement every time.</p>
+<h2 id="12-usage-example">12 Usage Example<a class="headerlink" href="#12-usage-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">app.database.transaction</span><span class="w"> </span><span class="kn">import</span> <span class="n">transaction</span><span class="p">,</span> <span class="n">execute_with_transaction</span><span class="p">,</span> <span class="n">TransactionError</span><span class="p">,</span> <span class="n">TransactionTimeout</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">insert_chunk</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Insert a chunk into the database.&quot;&quot;&quot;</span>
+    <span class="c1"># ... existing implementation ...</span>
+    <span class="k">return</span> <span class="n">chunk_id</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">insert_chunk_with_transaction</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">use_neon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Insert a chunk with transaction management.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">transaction</span><span class="p">(</span><span class="n">use_neon</span><span class="o">=</span><span class="n">use_neon</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+            <span class="n">chunk_id</span> <span class="o">=</span> <span class="n">insert_chunk</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">chunk_id</span>
+    <span class="k">except</span> <span class="n">TransactionTimeout</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insert operation timed out&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">except</span> <span class="n">TransactionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># Alternative using the execute_with_transaction helper</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">insert_chunk_with_helper</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">use_neon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Insert a chunk using the transaction helper.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">execute_with_transaction</span><span class="p">(</span>
+        <span class="n">insert_chunk</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
+        <span class="n">use_neon</span><span class="o">=</span><span class="n">use_neon</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
+    <span class="p">)</span>
+</code></pre></div>
 
 
 
