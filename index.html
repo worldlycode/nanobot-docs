@@ -433,6 +433,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#our-current-selections-for-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Our Current Selections for Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Current Selections for Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-as-our-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python as our Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-parsing-and-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document parsing and chunking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompts-with-jinja-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompts with Jinja Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-generative-ai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of Generative AI Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quick-navigation" class="md-nav__link">
     <span class="md-ellipsis">
       Quick Navigation
@@ -1230,6 +1290,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#our-current-selections-for-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Our Current Selections for Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Current Selections for Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-as-our-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python as our Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-parsing-and-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document parsing and chunking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompts-with-jinja-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompts with Jinja Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-generative-ai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of Generative AI Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quick-navigation" class="md-nav__link">
     <span class="md-ellipsis">
       Quick Navigation
@@ -1270,6 +1390,25 @@
 <p>We are developing a codebase that creates an intuitive pipeline that can be easily followed, understood and modified by all members involved in the development. The Dev component is a robust pipeline that can empower people and organizations to generate their very own Bot with their own documentation, enabling them to also demonstrate and understand the power and potential of GenAI in their own labs, facilities and research.</p>
 <p>This project presumes that an out-of-the-box chatbot developed using many online WYSIWYG frameworks is great for concept, but often fails on utility. By introducing and teaching these concepts in a python codebase framework, we open up the power of Generative AI with only a few customizations.  </p>
 <p>It is our hope by doing so, that we not only create a cohesive codebase with functional code for our respective facilities, but that we are able to bring new members on board to help them employ instances of this codebase at their own locations. This building of code simultaneously builds community and further collaboration — this is <span class="arithmatex">\(\mathbf{C}^3\)</span></p>
+<h2 id="our-current-selections-for-infrastructure">Our Current Selections for Infrastructure<a class="headerlink" href="#our-current-selections-for-infrastructure" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>As of 4/20/2025</p>
+</blockquote>
+<p>The current codebase aims to simplify some of the initial setup and modification of the basic steps of an application.  We have some boilerplate code that organized the steps of a RAG (Retrieval Augmented Generation) Generative AI system, and that has consolidated areas of code where one can modify the parameters of each module, simplyfying the use of the codebase.</p>
+<h3 id="python-as-our-language">Python as our Language<a class="headerlink" href="#python-as-our-language" title="Permanent link">&para;</a></h3>
+<p>Pyuthon is the standard language for most Generative AI applications, and is particullary easy to use. This module require <code>Python 3.12</code> or above.  </p>
+<h3 id="document-parsing-and-chunking">Document parsing and chunking<a class="headerlink" href="#document-parsing-and-chunking" title="Permanent link">&para;</a></h3>
+<p>We are currently using IBM's <a href="https://docling-project.github.io/docling/">Docling</a> which can be used to convert most general document formats (and even websites) into a format readable and usable to most Generative AI models.  In particular it is especially good at PDFs, and creates a Docling Document that seperatly identifies and extracts text, tables, pictures, document hierarchy with headers, sections and groups, and understands the content within the context of the page.  </p>
+<p>To start, we are extracting all the text and table and the provenance information (such as pages number, file name, and heading the information is part of)</p>
+<h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
+<p>We currently are using <a href="https://neon.tech">Neon.tech</a> for our Postgres database.  Postgres is an optimal solution at this early stage as postgres allows, via the <a href="https://github.com/pgvector/pgvector-python">pgvector plugin</a>, semantic similarity searches by vector arithmetic.  </p>
+<p>This choice to use <a href="">Neon.Tech</a> provides a web based solution, using the power of postgres and takes advantage of Neon's capability for data versioning and branching.</p>
+<h3 id="prompts-with-jinja-templates">Prompts with Jinja Templates<a class="headerlink" href="#prompts-with-jinja-templates" title="Permanent link">&para;</a></h3>
+<p>In this structure, we separate out the prompts for each call to the GenAI model so as to extract this from the working code, to make it more transparent, and to be able to easily modify the prompt for testing.</p>
+<p>The prompts are formatted and delivered to the model using Jinja templates, which also allows us to separate the functionality from the other Python code as well.  </p>
+<h3 id="choice-of-generative-ai-models">Choice of Generative AI Models<a class="headerlink" href="#choice-of-generative-ai-models" title="Permanent link">&para;</a></h3>
+<p>At this point we are using OpenAI for all aspects of our GenAI needs.  This includes using <code>4o</code> for the cleaning and formatting of the documents, the embedding of the vectors using , and <code>4o</code> for the chat completion steps.  </p>
+<p>This choice is currently determined by the quality and output of the model, and the ease of interacting with the API.  </p>
 <h2 id="quick-navigation">Quick Navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="getting-started.md">Getting Started</a> - Installation and basic setup</li>
