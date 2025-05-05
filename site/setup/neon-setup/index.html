@@ -515,6 +515,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    03-Neon
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -526,6 +539,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-database-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the database (URL)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1151,6 +1228,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-database-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the database (URL)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1166,6 +1296,26 @@
 
 
 <h1 id="configuring-neon-neontech">Configuring Neon <a href="https://neon.tech">(Neon.tech)</a><a class="headerlink" href="#configuring-neon-neontech" title="Permanent link">&para;</a></h1>
+<h2 id="account">Account<a class="headerlink" href="#account" title="Permanent link">&para;</a></h2>
+<p>You will need to set up an account.  There is a free tier which will be fine to get you started. You will need to verify the email address that you are using.  </p>
+<h2 id="project">Project<a class="headerlink" href="#project" title="Permanent link">&para;</a></h2>
+<p>After verifying your email information, you will need to create a project.  </p>
+<ul>
+<li>Below is a screenshot where I have created a nanobot-dev project.</li>
+<li>You will pick a location that is near the area that this data will serve.    </li>
+</ul>
+<p><img alt="neon-create-project" src="../../assets/images/neon_create_project_nanobot-dev.png" /></p>
+<h2 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
+<p>You will see that your default database name is neondb.  This is fine to keep for now.  </p>
+<h2 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">&para;</a></h2>
+<p><img alt="neon-default-branches" src="../../assets/images/neon_branches_nanobot-dev.png" /></p>
+<p>Both production and development braches are made.  Note that the development branch is a child of the main production branch.  The Default branch is the <code>production</code> branch.  </p>
+<h2 id="connecting-to-the-database-url">Connecting to the database (URL)<a class="headerlink" href="#connecting-to-the-database-url" title="Permanent link">&para;</a></h2>
+<p>Clicking on the production branch will bring up the following screen</p>
+<p><img alt="neon-production" src="../../assets/images/neon_primary_branch_production.png" /></p>
+<p>You then want to click onn the <code>Connect</code> button on the far right which will open a screen that looks like the one below:</p>
+<p><img alt="neon-connection-screen" src="../../assets/images/neon_production_connection_details.png" /></p>
+<p>Copy the connection string.  This is the <code>NEON_URL</code> that you will need in your <code>.env</code> file to connect to the database</p>
 
 
 

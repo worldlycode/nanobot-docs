@@ -1,35 +1,66 @@
-Welcome to the Nanobot-Dev documentation User Guide Pages
+# Nanobot Overview
 
-## Our Current Selections for Infrastructure
+## Architecture
 
-> As of 4/20/2025
+Nanobot is a RAG (Retrieval-Augmented Generation) system with a layered architecture:
 
-The current codebase aims to simplify some of the initial setup and modification of the basic steps of an application.  We have some boilerplate code that organized the steps of a RAG (Retrieval Augmented Generation) Generative AI system, and that has consolidated areas of code where one can modify the parameters of each module, simplyfying the use of the codebase.
+1. **Presentation Layer**: Streamlit UI (`nanobot.py`)
+2. **Service Layer**: Core business logic (`app/services/`)
+3. **Data Access Layer**: Database interactions (`app/database/`)
+4. **Utility Layer**: Helper functions (`app/utils/`)
 
-### Python as our Language
+## Document Processing Pipeline
 
-Pyuthon is the standard language for most Generative AI applications, and is particullary easy to use. This module require `Python 3.12` or above.  
+Documents flow through the system in these stages:
 
-### Document parsing and chunking
+1. Document conversion (Docling)
+2. Text chunking with configurable strategies
+3. Embedding generation (OpenAI)
+4. Vector storage (PostgreSQL with pgvector)
+5. Similarity-based retrieval
+6. LLM integration for response generation
 
-We are currently using IBM's [Docling](https://docling-project.github.io/docling/) which can be used to convert most general document formats (and even websites) into a format readable and usable to most Generative AI models.  In particular it is especially good at PDFs, and creates a Docling Document that seperatly identifies and extracts text, tables, pictures, document hierarchy with headers, sections and groups, and understands the content within the context of the page.  
+## Key Features
 
-To start, we are extracting all the text and table and the provenance information (such as pages number, file name, and heading the information is part of)
+- Modular codebase with clean separation of concerns
+- Multiple document chunking strategies
+- Vector similarity search
+- Interactive Streamlit interface
+- Enterprise-ready database with transaction support
+- Extensible framework for AI integrations
 
-### Database
+## Core Components:
+1. **app/** - Main application code
+   - **services/** - Service layer with document processing, chunking, and API integrations
+     - `document_service.py` - Complete pipeline for document processing
+     - `chunking_service.py` - Document chunking strategies
+     - `openai_service.py` - OpenAI API integration
+     - `prompt_loader.py` - For loading prompt templates
+   - **database/** - Database interactions
+     - `setup.py` - Database initialization
+     - `common.py` - Shared database utilities
+     - `insert.py` - Database insertion operations
+     - `retrieval.py` - Vector search and retrieval
+     - `transaction.py` - Transaction management
+     - `maintenance.py` - Database maintenance tasks
+   - **models/** - Data models and validators
+   - **utils/** - Utility functions
+     - File handling, tokenization, logging, etc.
+   - **config/** - Configuration settings
+   - **prompts/** - Prompt templates
 
-We currently are using [Neon.tech](https://neon.tech) for our Postgres database.  Postgres is an optimal solution at this early stage as postgres allows, via the [pgvector plugin](https://github.com/pgvector/pgvector-python), semantic similarity searches by vector arithmetic.  
+2. **Main Scripts**:
+   - `nanobot_poc.py` - Main Streamlit application with UI
+   - `process_and_load.py` - CLI tool for processing documents
 
-This choice to use [Neon.Tech]() provides a web based solution, using the power of postgres and takes advantage of Neon's capability for data versioning and branching.
+### Supporting Directories:
+- **data/** - Document storage
+- **tests/** - Comprehensive test suite
+- **examples/** - Example code 
+- **sandbox/** - For experimentation and notebooks
+- **logs/** - Log files
 
-### Prompts with Jinja Templates
 
-In this structure, we separate out the prompts for each call to the GenAI model so as to extract this from the working code, to make it more transparent, and to be able to easily modify the prompt for testing.
 
-The prompts are formatted and delivered to the model using Jinja templates, which also allows us to separate the functionality from the other Python code as well.  
 
-### Choice of Generative AI Models
 
-At this point we are using OpenAI for all aspects of our GenAI needs.  This includes using `4o` for the cleaning and formatting of the documents, the embedding of the vectors using , and `4o` for the chat completion steps.  
-
-This choice is currently determined by the quality and output of the model, and the ease of interacting with the API.  
