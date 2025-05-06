@@ -10,9 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/blog/scripts-and-modules/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/user-guide/settings/">
       
       
+        <link rel="prev" href="../00-index-user-guide/">
+      
+      
+        <link rel="next" href="../document-conversion/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Scripts and modules - NanoBot-Dev Documentation 🤖</title>
+        <title>Settings Configuration - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#option-1-run-a-module-as-the-main-program" class="md-skip">
+        <a href="#configuration-guide-using-the-settings-system" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts and modules
+              Settings Configuration
             
           </span>
         </div>
@@ -246,11 +250,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../user-guide/00-index-user-guide/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-user-guide/" class="md-tabs__link">
           
   
   
@@ -309,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../00-index-blog/" class="md-tabs__link">
+        <a href="../../blog/00-index-blog/" class="md-tabs__link">
           
   
   
@@ -593,28 +599,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -627,7 +636,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -641,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/00-index-user-guide/" class="md-nav__link">
+      <a href="../00-index-user-guide/" class="md-nav__link">
         
   
   
@@ -661,10 +670,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../user-guide/settings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Settings Configuration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -675,6 +706,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-settings-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Settings Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-env-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the .env File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the .env File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-env-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic .env Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-path-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Path Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-api-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAI API Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Priority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-settings-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Settings in Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reloading-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reloading Settings
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -687,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/document-conversion/" class="md-nav__link">
+      <a href="../document-conversion/" class="md-nav__link">
         
   
   
@@ -710,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/document-chunking/" class="md-nav__link">
+      <a href="../document-chunking/" class="md-nav__link">
         
   
   
@@ -733,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/document-processor/" class="md-nav__link">
+      <a href="../document-processor/" class="md-nav__link">
         
   
   
@@ -756,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/utils/" class="md-nav__link">
+      <a href="../utils/" class="md-nav__link">
         
   
   
@@ -779,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/tests/" class="md-nav__link">
+      <a href="../tests/" class="md-nav__link">
         
   
   
@@ -802,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -825,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/vector-search/" class="md-nav__link">
+      <a href="../vector-search/" class="md-nav__link">
         
   
   
@@ -1020,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00-index-blog/" class="md-nav__link">
+      <a href="../../blog/00-index-blog/" class="md-nav__link">
         
   
   
@@ -1043,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/" class="md-nav__link">
+      <a href="../../blog/mkdocs/" class="md-nav__link">
         
   
   
@@ -1066,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/" class="md-nav__link">
+      <a href="../../blog/markdown/" class="md-nav__link">
         
   
   
@@ -1089,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docling/" class="md-nav__link">
+      <a href="../../blog/docling/" class="md-nav__link">
         
   
   
@@ -1112,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logging/" class="md-nav__link">
+      <a href="../../blog/logging/" class="md-nav__link">
         
   
   
@@ -1135,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../packages-and-imports/" class="md-nav__link">
+      <a href="../../blog/packages-and-imports/" class="md-nav__link">
         
   
   
@@ -1158,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pgadmin/" class="md-nav__link">
+      <a href="../../blog/pgadmin/" class="md-nav__link">
         
   
   
@@ -1198,6 +1369,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1206,18 +1379,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-run-a-module-as-the-main-program" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: run a module as the main program
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-execute-a-standalone-script" class="md-nav__link">
+  <a href="#the-settings-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: Execute a standalone script
+      The Settings Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-env-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the .env File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the .env File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-env-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic .env Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-path-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Path Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-api-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAI API Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Priority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-settings-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Settings in Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reloading-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reloading Settings
     </span>
   </a>
   
@@ -1239,26 +1514,207 @@
 
 
 
-  <h1>Scripts and modules</h1>
+<h1 id="configuration-guide-using-the-settings-system">Configuration Guide: Using the Settings System<a class="headerlink" href="#configuration-guide-using-the-settings-system" title="Permanent link">&para;</a></h1>
+<p>This guide explains how to configure the application through the settings system and environment variables.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Our application uses a configuration system based on Pydantic that allows for:
+- Sensible defaults for all settings
+- Configuration via environment variables or <code>.env</code> file
+- Type validation to prevent configuration errors</p>
+<h2 id="the-settings-module">The Settings Module<a class="headerlink" href="#the-settings-module" title="Permanent link">&para;</a></h2>
+<p>The <code>app/config/settings.py</code> module defines all application settings in a structured way. Settings are organized into categories like database settings, API keys, file paths, etc.</p>
+<h2 id="using-the-env-file">Using the <code>.env</code> File<a class="headerlink" href="#using-the-env-file" title="Permanent link">&para;</a></h2>
+<p>The easiest way to configure the application is by creating a <code>.env</code> file in the project root. This file contains environment variables that override default settings.</p>
+<h3 id="basic-env-example">Basic <code>.env</code> Example<a class="headerlink" href="#basic-env-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># Database Configuration
 
-<h2 id="option-1-run-a-module-as-the-main-program">Option 1:  run a module as the main program<a class="headerlink" href="#option-1-run-a-module-as-the-main-program" title="Permanent link">&para;</a></h2>
-<ul>
-<li>remember tha a file contining python code used by other parts of a package is a "module" even if it only has one line of code in it</li>
-<li>The code must be in the directory tree of the projects and this must be executed from the project root directory</li>
-<li>this will execute all of the code in that module, and is a good way to execute <code>__main__</code> code</li>
-</ul>
-<p>To execute this you want to use the following syntax
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>modulepath.modulename
-</code></pre></div></p>
-<ul>
-<li>the <code>-m</code> means that it is searching for a module</li>
-<li>we give dots - <code>.</code> notatiion as this is how we define the paths as in an import statement.  </li>
-<li>there is no extension <code>.py</code> as we are refereing to it by its import path, not its filename</li>
-</ul>
-<h2 id="option-2-execute-a-standalone-script">Option 2: Execute a standalone script<a class="headerlink" href="#option-2-execute-a-standalone-script" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>run_example_directly.py
+LOCAL_DB_ADMIN_NAME=postgres
+LOCAL_DB_ADMIN_USER=postgres
+LOCAL_DB_ADMIN_PASSWORD=postgres
+LOCAL_DB_ADMIN_HOST=localhost
+LOCAL_DB_ADMIN_PORT=5432
+
+
+LOCAL_DB_NAME=myapp
+LOCAL_DB_USER=postgres
+LOCAL_DB_PASSWORD=mysecretpassword
+LOCAL_DB_HOST=localhost
+LOCAL_DB_PORT=5432
+
+# OpenAI API Configuration
+OPENAI_API_KEY=sk-your-api-key
+LOGFIRE_TOKEN=pylf-your-token
+
+# Neon Database String
+NEON_DB_URL=postgresql://neondb_owner:full-neon-url
+USE_NEON=true
+
+# File Paths (optional)
+DATA_BASE_DIR=data
+DATA_ORIGINAL_DOCS_DIR=original_docs
+DATA_CONVERTED_DOCS_DIR=converted_docs
+DATA_CHUNKING_RESULTS_DIR=chunking_results
 </code></pre></div>
-In this case the code is not part of the package, and the code resides outside of the package.  </p>
+<h2 id="settings-categories">Settings Categories<a class="headerlink" href="#settings-categories" title="Permanent link">&para;</a></h2>
+<h3 id="file-path-settings">File Path Settings<a class="headerlink" href="#file-path-settings" title="Permanent link">&para;</a></h3>
+<p>Controls where the application stores and processes documents.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Environment Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Data Directory</td>
+<td><code>DATA_BASE_DIR</code></td>
+<td><code>data</code></td>
+<td>Root directory for all data files</td>
+</tr>
+<tr>
+<td>Original Documents</td>
+<td><code>DATA_ORIGINAL_DOCS_DIR</code></td>
+<td><code>original_docs</code></td>
+<td>Where uploaded documents are stored</td>
+</tr>
+<tr>
+<td>Converted Documents</td>
+<td><code>DATA_CONVERTED_DOCS_DIR</code></td>
+<td><code>converted_docs</code></td>
+<td>Where processed documents are stored</td>
+</tr>
+<tr>
+<td>Chunking Results</td>
+<td><code>DATA_CHUNKING_RESULTS_DIR</code></td>
+<td><code>chunking_results</code></td>
+<td>Where document chunks are stored</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database-settings">Database Settings<a class="headerlink" href="#database-settings" title="Permanent link">&para;</a></h3>
+<p>Controls database connection parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Environment Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database Name</td>
+<td><code>LOCAL_DB_NAME</code></td>
+<td></td>
+<td>Name of the database</td>
+</tr>
+<tr>
+<td>Database User</td>
+<td><code>LOCAL_DB_USER</code></td>
+<td></td>
+<td>Database username</td>
+</tr>
+<tr>
+<td>Database Password</td>
+<td><code>LOCAL_DB_PASSWORD</code></td>
+<td></td>
+<td>Database password</td>
+</tr>
+<tr>
+<td>Database Host</td>
+<td><code>LOCAL_DB_HOST</code></td>
+<td></td>
+<td>Database server address</td>
+</tr>
+<tr>
+<td>Database Port</td>
+<td><code>LOCAL_DB_PORT</code></td>
+<td></td>
+<td>Database server port</td>
+</tr>
+</tbody>
+</table>
+<h3 id="openai-api-settings">OpenAI API Settings<a class="headerlink" href="#openai-api-settings" title="Permanent link">&para;</a></h3>
+<p>Controls OpenAI API integration.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Environment Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API Key</td>
+<td><code>OPENAI_API_KEY</code></td>
+<td></td>
+<td>Your OpenAI API key</td>
+</tr>
+<tr>
+<td>Model</td>
+<td><code>OPENAI_MODEL</code></td>
+<td><code>gpt-4o</code></td>
+<td>Model to use for completions</td>
+</tr>
+<tr>
+<td>Embedding Model</td>
+<td><code>OPENAI_EMBEDDING_MODEL</code></td>
+<td><code>text-embedding-3-small</code></td>
+<td>Model for embeddings</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td><code>OPENAI_TEMPERATURE</code></td>
+<td><code>0.0</code></td>
+<td>Controls randomness in responses</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration-priority">Configuration Priority<a class="headerlink" href="#configuration-priority" title="Permanent link">&para;</a></h2>
+<p>Settings are loaded in the following order of precedence (highest to lowest):</p>
+<ol>
+<li>Environment variables</li>
+<li>Variables in the <code>.env</code> file</li>
+<li>Default values from <code>settings.py</code></li>
+</ol>
+<p>This means that environment variables will always override <code>.env</code> file settings, which in turn override defaults.</p>
+<h2 id="accessing-settings-in-code">Accessing Settings in Code<a class="headerlink" href="#accessing-settings-in-code" title="Permanent link">&para;</a></h2>
+<p>To use these settings in your code:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">app.config.settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
+
+<span class="c1"># Database connection parameters</span>
+<span class="n">db_params</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">local_db</span><span class="o">.</span><span class="n">get_connection_dict</span><span class="p">()</span>
+
+<span class="c1"># File paths</span>
+<span class="n">original_docs_path</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">file_paths</span><span class="o">.</span><span class="n">get_original_docs_path</span><span class="p">()</span>
+<span class="n">converted_docs_path</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">file_paths</span><span class="o">.</span><span class="n">get_converted_docs_path</span><span class="p">()</span>
+
+<span class="c1"># API Settings</span>
+<span class="n">openai_key</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">openai</span><span class="o">.</span><span class="n">api_key</span>
+</code></pre></div>
+<h2 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
+<p>When you first run the application, the system will automatically create all necessary data directories based on your settings. The default structure is:</p>
+<div class="highlight"><pre><span></span><code>project_root/
+└── data/
+    ├── original_docs/
+    ├── converted_docs/
+    └── chunking_results/
+</code></pre></div>
+<p>You can customize these locations using the environment variables listed above.</p>
+<h2 id="reloading-settings">Reloading Settings<a class="headerlink" href="#reloading-settings" title="Permanent link">&para;</a></h2>
+<p>If you need to reload settings at runtime (after changing environment variables):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">app.config.settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">reload_settings</span>
+
+<span class="c1"># Reload all settings</span>
+<span class="n">reload_settings</span><span class="p">()</span>
+</code></pre></div>
+<p>This will recreate all required directories with the updated paths.</p>
 
 
 
