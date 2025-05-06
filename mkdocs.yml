@@ -95,10 +95,12 @@ nav:
     - 06-Running NanoBot: setup/running-nanobot.md
   - User Guide:
     - Overview: user-guide/00-index-user-guide.md
+    - Document Conversion: user-guide/document-conversion.md
+    - Document Chunking: user-guide/document-chunking.md
+    - Document Processing Script: user-guide/document-processor.md
     - What is in Utils: user-guide/utils.md
     - Coding with Tests: user-guide/tests.md
     - Collaborating with Git: user-guide/git.md
-    - Document Processing: user-guide/document-processing.md
     - Vector Search: user-guide/vector-search.md
   - API Reference:
     - Database: api/database.md
