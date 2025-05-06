@@ -95,6 +95,7 @@ nav:
     - 06-Running NanoBot: setup/running-nanobot.md
   - User Guide:
     - Overview: user-guide/00-index-user-guide.md
+    - Settings Configuration: user-guide/settings.md
     - Document Conversion: user-guide/document-conversion.md
     - Document Chunking: user-guide/document-chunking.md
     - Document Processing Script: user-guide/document-processor.md
