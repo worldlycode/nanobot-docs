@@ -30,6 +30,44 @@ This guide will help you set up and start using NanoBot.
    ```bash
    pip install -r requirements.txt
    ```
+   the current `requirements.txt` file includes the following:
+   ```bash
+   # Database
+   psycopg2-binary
+
+   # Configuration
+   pydantic-settings
+   python-dotenv
+
+   # Template Engine
+   jinja2
+
+   # Logging
+   logfire
+
+   # Data Processing
+   pandas
+   matplotlib
+
+   # Document Processing
+   docling
+   docling-core
+
+   # OpenAI
+   openai
+
+   # Tokenization
+   tiktoken
+
+   # Web UI
+   streamlit
+
+   # if you use Jupyter notebooks
+   ipykernel
+
+   #testing
+   pytest
+   ```
    Note this make take severl minute as the Docling library installs several ML models from hugging face, and also pytorch packages to run these locally
 
 ## Setup
