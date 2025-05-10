@@ -1377,6 +1377,43 @@
 <p>Install dependencies:<br />
    <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
+   the current <code>requirements.txt</code> file includes the following:
+   <div class="highlight"><pre><span></span><code><span class="c1"># Database</span>
+psycopg2-binary
+
+<span class="c1"># Configuration</span>
+pydantic-settings
+python-dotenv
+
+<span class="c1"># Template Engine</span>
+jinja2
+
+<span class="c1"># Logging</span>
+logfire
+
+<span class="c1"># Data Processing</span>
+pandas
+matplotlib
+
+<span class="c1"># Document Processing</span>
+docling
+docling-core
+
+<span class="c1"># OpenAI</span>
+openai
+
+<span class="c1"># Tokenization</span>
+tiktoken
+
+<span class="c1"># Web UI</span>
+streamlit
+
+<span class="c1"># if you use Jupyter notebooks</span>
+ipykernel
+
+<span class="c1">#testing</span>
+pytest
+</code></pre></div>
    Note this make take severl minute as the Docling library installs several ML models from hugging face, and also pytorch packages to run these locally</p>
 </li>
 </ol>
