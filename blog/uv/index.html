@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/user-guide/00-index-user-guide/">
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/blog/uv/">
       
       
-        <link rel="prev" href="../../setup/running-nanobot/">
+        <link rel="prev" href="../markdown/">
       
       
-        <link rel="next" href="../settings/">
+        <link rel="next" href="../docling/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Overview - NanoBot-Dev Documentation 🤖</title>
+        <title>Package Management with uv - NanoBot-Dev Documentation 🤖</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nanobot-overview" class="md-skip">
+        <a href="#switching-to-uv-for-package-and-environment-management" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Package Management with uv
             
           </span>
         </div>
@@ -250,13 +250,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../user-guide/00-index-user-guide/" class="md-tabs__link">
           
   
   
@@ -311,11 +309,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blog/00-index-blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-blog/" class="md-tabs__link">
           
   
   
@@ -599,31 +599,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -636,7 +633,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -647,32 +644,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user-guide/00-index-user-guide/" class="md-nav__link">
         
   
   
@@ -683,77 +658,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#document-processing-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Document Processing Pipeline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Components:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Components:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supporting-directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Supporting Directories:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -766,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/" class="md-nav__link">
+      <a href="../../user-guide/settings/" class="md-nav__link">
         
   
   
@@ -789,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document-conversion/" class="md-nav__link">
+      <a href="../../user-guide/document-conversion/" class="md-nav__link">
         
   
   
@@ -812,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document-chunking/" class="md-nav__link">
+      <a href="../../user-guide/document-chunking/" class="md-nav__link">
         
   
   
@@ -835,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document-processor/" class="md-nav__link">
+      <a href="../../user-guide/document-processor/" class="md-nav__link">
         
   
   
@@ -858,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../../user-guide/utils/" class="md-nav__link">
         
   
   
@@ -881,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tests/" class="md-nav__link">
+      <a href="../../user-guide/tests/" class="md-nav__link">
         
   
   
@@ -904,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../user-guide/git/" class="md-nav__link">
         
   
   
@@ -927,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector-search/" class="md-nav__link">
+      <a href="../../user-guide/vector-search/" class="md-nav__link">
         
   
   
@@ -1074,28 +978,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1108,7 +1015,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -1122,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/00-index-blog/" class="md-nav__link">
+      <a href="../00-index-blog/" class="md-nav__link">
         
   
   
@@ -1145,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/mkdocs/" class="md-nav__link">
+      <a href="../mkdocs/" class="md-nav__link">
         
   
   
@@ -1168,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/markdown/" class="md-nav__link">
+      <a href="../markdown/" class="md-nav__link">
         
   
   
@@ -1188,10 +1095,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../blog/uv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Package Management with uv
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1202,6 +1131,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#venv" class="md-nav__link">
+    <span class="md-ellipsis">
+      venv:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      pip:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-is-a-newer-alternative-that-combines-both-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      uv is a newer alternative that combines both functions:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-of-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-environment-using-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a virtual environment using uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-pyprojecttoml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the pyproject.toml file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-using-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing using Sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addidng-packages-with-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addidng packages with uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      uv lock
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1214,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/docling/" class="md-nav__link">
+      <a href="../docling/" class="md-nav__link">
         
   
   
@@ -1237,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -1260,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/packages-and-imports/" class="md-nav__link">
+      <a href="../packages-and-imports/" class="md-nav__link">
         
   
   
@@ -1283,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/pgadmin/" class="md-nav__link">
+      <a href="../pgadmin/" class="md-nav__link">
         
   
   
@@ -1333,53 +1363,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#venv" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture
+      venv:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#document-processing-pipeline" class="md-nav__link">
+  <a href="#pip" class="md-nav__link">
     <span class="md-ellipsis">
-      Document Processing Pipeline
+      pip:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#uv-is-a-newer-alternative-that-combines-both-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      uv is a newer alternative that combines both functions:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-components" class="md-nav__link">
+  <a href="#installation-of-uv" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Components:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Components:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supporting-directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Supporting Directories:
+      Installation of uv
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-environment-using-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a virtual environment using uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-pyprojecttoml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the pyproject.toml file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-using-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing using Sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addidng-packages-with-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addidng packages with uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      uv lock
+    </span>
+  </a>
   
 </li>
       
@@ -1399,76 +1459,109 @@
 
 
 
-<h1 id="nanobot-overview">Nanobot Overview<a class="headerlink" href="#nanobot-overview" title="Permanent link">&para;</a></h1>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>Nanobot is a RAG (Retrieval-Augmented Generation) system with a layered architecture:</p>
-<ol>
-<li><strong>Presentation Layer</strong>: Streamlit UI (<code>nanobot.py</code>)</li>
-<li><strong>Service Layer</strong>: Core business logic (<code>app/services/</code>)</li>
-<li><strong>Data Access Layer</strong>: Database interactions (<code>app/database/</code>)</li>
-<li><strong>Utility Layer</strong>: Helper functions (<code>app/utils/</code>)</li>
-</ol>
-<h2 id="document-processing-pipeline">Document Processing Pipeline<a class="headerlink" href="#document-processing-pipeline" title="Permanent link">&para;</a></h2>
-<p>Documents flow through the system in these stages:</p>
-<ol>
-<li>Document conversion (Docling)</li>
-<li>Text chunking with configurable strategies</li>
-<li>Embedding generation (OpenAI)</li>
-<li>Vector storage (PostgreSQL with pgvector)</li>
-<li>Similarity-based retrieval</li>
-<li>LLM integration for response generation</li>
-</ol>
-<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h1 id="switching-to-uv-for-package-and-environment-management">Switching to uv for Package and Environment Management<a class="headerlink" href="#switching-to-uv-for-package-and-environment-management" title="Permanent link">&para;</a></h1>
+<p><strong>Date:</strong> May 11, 2025<br />
+<strong>Author:</strong> sam-i-am</p>
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
+
+<p>Using pip as a package manager together with venv to manage isolated python environments has historically been the default way to manage packages and local environments.  However, there are a few drawbacks. It is slow for installing large packages, and the requirements files include all of the sub-dependencies of each package.  </p>
+<p>As a best practice it is ideal to have only the high-level packages in the installation, and to let those packages manage the installation of the sub-dependencies.  </p>
+<p><a href="https://docs.astral.sh/uv/">uv</a> is now gaining popularity as a package and environemnt manager, combinding the functions of both pip and venv. I am jumping on the bandwagon, especially after waiting over 5 minutes for the <code>docling</code> installation which includes pytorch and hugging face models.  The same installation only takes seconds with uv.  </p>
+<h2 id="venv">venv:<a class="headerlink" href="#venv" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Modular codebase with clean separation of concerns</li>
-<li>Multiple document chunking strategies</li>
-<li>Vector similarity search</li>
-<li>Interactive Streamlit interface</li>
-<li>Enterprise-ready database with transaction support</li>
-<li>Extensible framework for AI integrations</li>
+<li>Creates isolated Python environments with their own packages</li>
+<li>Doesn't install packages itself</li>
+<li>Included in Python's standard library since 3.3</li>
 </ul>
-<h2 id="core-components">Core Components:<a class="headerlink" href="#core-components" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>app/</strong> - Main application code</li>
-<li><strong>services/</strong> - Service layer with document processing, chunking, and API integrations<ul>
-<li><code>document_service.py</code> - Complete pipeline for document processing</li>
-<li><code>chunking_service.py</code> - Document chunking strategies</li>
-<li><code>openai_service.py</code> - OpenAI API integration</li>
-<li><code>prompt_loader.py</code> - For loading prompt templates</li>
-</ul>
-</li>
-<li><strong>database/</strong> - Database interactions<ul>
-<li><code>setup.py</code> - Database initialization</li>
-<li><code>common.py</code> - Shared database utilities</li>
-<li><code>insert.py</code> - Database insertion operations</li>
-<li><code>retrieval.py</code> - Vector search and retrieval</li>
-<li><code>transaction.py</code> - Transaction management</li>
-<li><code>maintenance.py</code> - Database maintenance tasks</li>
-</ul>
-</li>
-<li><strong>models/</strong> - Data models and validators</li>
-<li><strong>utils/</strong> - Utility functions<ul>
-<li>File handling, tokenization, logging, etc.</li>
-</ul>
-</li>
-<li><strong>config/</strong> - Configuration settings</li>
-<li>
-<p><strong>prompts/</strong> - Prompt templates</p>
-</li>
-<li>
-<p><strong>Main Scripts</strong>:</p>
-</li>
-<li><code>nanobot_poc.py</code> - Main Streamlit application with UI</li>
-<li><code>process_and_load.py</code> - CLI tool for processing documents</li>
-</ol>
-<h3 id="supporting-directories">Supporting Directories:<a class="headerlink" href="#supporting-directories" title="Permanent link">&para;</a></h3>
+<h2 id="pip">pip:<a class="headerlink" href="#pip" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>data/</strong> - Document storage</li>
-<li><strong>tests/</strong> - Comprehensive test suite</li>
-<li><strong>examples/</strong> - Example code </li>
-<li><strong>sandbox/</strong> - For experimentation and notebooks</li>
-<li><strong>logs/</strong> - Log files</li>
+<li>The standard Python package manager</li>
+<li>Installs, upgrades, and manages Python packages</li>
+<li>Used within virtual environments created by venv</li>
 </ul>
+<h2 id="uv-is-a-newer-alternative-that-combines-both-functions">uv is a newer alternative that combines both functions:<a class="headerlink" href="#uv-is-a-newer-alternative-that-combines-both-functions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Much faster package installer than pip (written in Rust)</li>
+<li>Also creates virtual environments like venv</li>
+<li>Often 10-100x faster than pip for installation operations</li>
+<li>Maintains compatibility with pip's ecosystem (requirements.txt, etc.)</li>
+</ul>
+<h2 id="installation-of-uv">Installation of uv<a class="headerlink" href="#installation-of-uv" title="Permanent link">&para;</a></h2>
+<p>I followed the <a href="https://daveebbelaar.com/blog/2024/03/20/getting-started-with-uv-the-ultra-fast-python-package-manager/">blog post by Dave Ebbelaar</a> to set up uv on my WSL2 linux environment on windows.  </p>
+<p>on macOS (using Homebrew)
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>uv
+</code></pre></div></p>
+<p>On Linux / macOS / WSL (using curl)
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div></p>
+<p>On Windows (using PowerShell)
+<div class="highlight"><pre><span></span><code>powershell<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
+</code></pre></div></p>
+<h2 id="creating-a-virtual-environment-using-uv">Creating a virtual environment using uv<a class="headerlink" href="#creating-a-virtual-environment-using-uv" title="Permanent link">&para;</a></h2>
+<p>run the following command
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>venv
+</code></pre></div></p>
+<p>This will create a folder named <code>.venv</code>.  To switch to this environment</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w"> </span>
+</code></pre></div>
+<p>On Windows this would be:
+<div class="highlight"><pre><span></span><code>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</code></pre></div></p>
+<p>If you now type:
+<div class="highlight"><pre><span></span><code>which<span class="w"> </span>python
+</code></pre></div></p>
+<p>You will be able to verify that you are now working in the local .venv environment.</p>
+<h2 id="building-the-pyprojecttoml-file">Building the <code>pyproject.toml</code> file<a class="headerlink" href="#building-the-pyprojecttoml-file" title="Permanent link">&para;</a></h2>
+<p>The requirements that a project needs are kept in a <code>.toml</code> file in the root directoy with the name <code>pyproject.toml</code>  </p>
+<p>Below is an example of such a file for an example <code>nanobot</code> project.  There are many other things that can be included in this file, but these are the basics.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[project]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;nanobot&quot;</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span>
+<span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;NanoBot - AI assistant application&quot;</span>
+<span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;=3.10&quot;</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="c1"># Database</span>
+<span class="w">    </span><span class="s2">&quot;psycopg2-binary&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Configuration</span>
+<span class="w">    </span><span class="s2">&quot;pydantic-settings&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;python-dotenv&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Template Engine</span>
+<span class="w">    </span><span class="s2">&quot;jinja2&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Logging</span>
+<span class="w">    </span><span class="s2">&quot;logfire&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Data Processing</span>
+<span class="w">    </span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;matplotlib&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Document Processing</span>
+<span class="w">    </span><span class="s2">&quot;docling&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;docling-core&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># OpenAI</span>
+<span class="w">    </span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Tokenization</span>
+<span class="w">    </span><span class="s2">&quot;tiktoken&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Web UI</span>
+<span class="w">    </span><span class="s2">&quot;streamlit&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<h2 id="installing-using-sync">Installing using Sync<a class="headerlink" href="#installing-using-sync" title="Permanent link">&para;</a></h2>
+<p>To install the dependencies in the <code>pyproject.toml</code> file, you will run the following command:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync
+</code></pre></div>
+<p>You will then see the packages and their dependencies being installed, ofter at a speed of 10x-100x of what a standard pip installation would take. </p>
+<h2 id="addidng-packages-with-uv">Addidng packages with uv<a class="headerlink" href="#addidng-packages-with-uv" title="Permanent link">&para;</a></h2>
+<p>You will preceed many of your commands with <code>uv</code>.  ie for package installation:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>package<span class="w"> </span>name<span class="o">(</span>s<span class="o">)]</span>
+</code></pre></div>
+<h2 id="uv-lock">uv lock<a class="headerlink" href="#uv-lock" title="Permanent link">&para;</a></h2>
+<p>This will allow you to lock the dependencies and versions.  Please look into the <a href="https://docs.astral.sh/uv/">uv docs</a> for more information. </p>
 
 
 
