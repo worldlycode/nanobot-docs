@@ -111,6 +111,7 @@ nav:
     - Welcome!: blog/00-index-blog.md
     - Choosing MkDocs: blog/mkdocs.md    
     - Markdown Cheatsheet: blog/markdown.md
+    - Package Management with uv: blog/uv.md
     - Understanding Docling: blog/docling.md
     - Logging with Python: blog/logging.md
     - Packages and Imports: blog/packages-and-imports.md
