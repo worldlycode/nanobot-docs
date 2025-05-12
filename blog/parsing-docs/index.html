@@ -1,0 +1,1821 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the NanoBot-Dev project">
+      
+      
+      
+        <link rel="canonical" href="https://worldlycode.github.io/nanobot-dev-docs/blog/parsing-docs/">
+      
+      
+        <link rel="prev" href="../pgadmin/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Document Conversion Tools - NanoBot-Dev Documentation 🤖</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#document-conversion-tools-for-llm-processing-a-comparative-evaluation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NanoBot-Dev Documentation 🤖" class="md-header__button md-logo" aria-label="NanoBot-Dev Documentation 🤖" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NanoBot-Dev Documentation 🤖
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Document Conversion Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../setup/00-index-setup/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../user-guide/00-index-user-guide/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/database/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-index-blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NanoBot-Dev Documentation 🤖" class="md-nav__button md-logo" aria-label="NanoBot-Dev Documentation 🤖" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NanoBot-Dev Documentation 🤖
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/00-index-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01-Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/logfire-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02-Logfire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/neon-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03-Neon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/postgres-local-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04-Local Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/database-table-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05-Database Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/running-nanobot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06-Running NanoBot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/00-index-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/document-conversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Conversion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/document-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Chunking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/document-processor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Processing Script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is in Utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding with Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collaborating with Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/vector-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector Search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-index-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Choosing MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Management with uv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Docling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging with Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages-and-imports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packages and Imports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pgadmin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring pgAdmin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Document Conversion Tools
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Conversion Tools
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Source Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-Source Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-docling" class="md-nav__link">
+    <span class="md-ellipsis">
+      IBM Docling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unstructuredio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unstructured.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llamaindex-and-llamaparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      LlamaIndex (and LlamaParse)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-llm-vision-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom LLM Vision Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commercial-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commercial Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-aws-textract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon AWS Textract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-form-recognizer-document-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Form Recognizer (Document Intelligence)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-document-ai-and-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Document AI and Others
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparative-features-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparative Features and Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Source Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-Source Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-docling" class="md-nav__link">
+    <span class="md-ellipsis">
+      IBM Docling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unstructuredio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unstructured.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llamaindex-and-llamaparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      LlamaIndex (and LlamaParse)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-llm-vision-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom LLM Vision Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commercial-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commercial Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-aws-textract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon AWS Textract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-form-recognizer-document-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Form Recognizer (Document Intelligence)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-document-ai-and-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Document AI and Others
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparative-features-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparative Features and Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="document-conversion-tools-for-llm-processing-a-comparative-evaluation">Document Conversion Tools for LLM Processing: A Comparative Evaluation<a class="headerlink" href="#document-conversion-tools-for-llm-processing-a-comparative-evaluation" title="Permanent link">&para;</a></h1>
+<p><strong>Date:</strong> May 11, 2025<br />
+<strong>Author:</strong> ChatGPT Deep Research</p>
+<pre style="color: #3f51b5; font-size: 1.1rem;"><code>"Hello World! 🌐"</code></pre>
+
+<p>I have asked ChatGPT Deep Research to compare the most capable tools for converting complex scientific documents—like PDFs, PPTs, and Google Docs—into markdown, with support for OCR, tables, images, and heading structures. We want to compare both open-source and commercial tools (like IBM DocLing, Unstructured, LlamaIndex, and vision-based LLMs), assess their document parsing quality, formatting preservation, chunking strategies (semantic and structural), and Python ecosystem integration.</p>
+<p>Here is the summary:</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Converting complex documents into <strong>clean, structured Markdown</strong> is crucial for use with Large Language Models. Scientific manuals, technical methods, and tool documentation often contain rich formatting (headings, <strong>tables</strong>, images, graphs, and even equations) that should be preserved for LLMs to understand context. This comparison evaluates leading document conversion tools – both open-source and commercial – focusing on their ability to produce <strong>Markdown</strong> output that is semantically or structurally chunked and suitable for LLM pipelines. We cover open-source tools like <strong>IBM Docling</strong>, <strong>Unstructured.io</strong>, <strong>LlamaIndex</strong>, and <strong>custom LLM vision models</strong>, as well as cloud platforms (e.g. <strong>AWS Textract</strong>, <strong>Azure Form Recognizer</strong>) where applicable. Key criteria include:</p>
+<ul>
+<li><strong>Markdown Fidelity</strong> (preservation of headings, lists, <strong>tables</strong>, images, and math/LaTeX formatting)</li>
+<li><strong>OCR Support</strong> for scanned PDFs and images</li>
+<li><strong>Chunking Capabilities</strong> (semantic vs. structural chunking and customization)</li>
+<li><strong>Integration</strong> with Python-based LLM workflows (LangChain, LlamaIndex, etc.)</li>
+<li><strong>Support for Scientific/Technical Content</strong> (e.g. equations, diagrams, special symbols)</li>
+<li><strong>Ease of Use &amp; Flexibility</strong> (installation, API/CLI availability, ecosystem support)</li>
+</ul>
+<p>Below, we examine each tool/category against these criteria, followed by a summary comparison table.</p>
+<h2 id="open-source-solutions">Open-Source Solutions<a class="headerlink" href="#open-source-solutions" title="Permanent link">&para;</a></h2>
+<h3 id="ibm-docling">IBM Docling<a class="headerlink" href="#ibm-docling" title="Permanent link">&para;</a></h3>
+<p>IBM’s <strong>Docling</strong> is a modern open-source toolkit (MIT-licensed) explicitly designed to convert a wide range of document formats (PDF, DOCX, PPTX, HTML, etc.) into structured <strong>Markdown or JSON</strong>. It was released in mid-2024 and quickly gained popularity for its <strong>output quality</strong> – <em>“The output quality is the best of all the open-source solutions,”</em> noted one developer. Docling emphasizes <strong>layout preservation</strong>: it uses computer vision models to detect page structure (text blocks, headings, columns, images, tables, captions, footnotes) rather than relying solely on OCR. This approach yields Markdown that retains the original formatting (including proper headings, lists, and multi-column order) for high fidelity. <strong>Tables</strong> are handled via an advanced model (TableFormer) that reconstructs tables into Markdown (or structured data) with accurate rows and columns. Images and figures are extracted and referenced so that the Markdown can embed them (often via <code>![]()</code> with either local paths or base64) – ensuring diagrams or screenshots in manuals are not lost.</p>
+<p><strong>OCR and Scanned PDFs:</strong> Docling avoids OCR when text is digitally accessible, which <em>“reduces errors and speeds up processing by \~30×”</em>. For scanned pages or images, it can integrate with OCR engines. Out of the box, it supports EasyOCR and Tesseract for text recognition. However, default OCR (EasyOCR) is relatively slow on CPU. Docling’s design allows swapping in better OCR models; for example, developers have used <strong>RapidOCR</strong> (optimized OCR models) with Docling to improve speed and accuracy. Still, Docling’s <strong>strength is in “born-digital” documents</strong>; it struggles more with purely scanned or handwritten documents. The creators acknowledge plans to expand Docling’s capabilities for <strong>math equations, charts, and forms</strong> in the future, but currently those may not be fully parsed (equations might come through as images or unstructured text).</p>
+<p><strong>Chunking:</strong> Docling outputs a structured Markdown (often as a single document) with preserved hierarchy (it keeps the heading structure, etc.). For large documents, it can optionally split output by page or section. In fact, Docling’s Python API returns a rich <code>DoclingDocument</code> object, which tools like LlamaIndex can further split into chunks by pages or headings. Because Docling maintains the document’s logical structure, it pairs well with <strong>structural chunking</strong> – e.g. splitting by Markdown headings or sections is straightforward. Users have noted Docling <em>“allows splitting [by page] out of the box”</em>, making it compatible with external chunkers. In RAG pipelines, one might use Docling to convert to Markdown and then apply a chunking function (by heading or token size) to create LLM-ready chunks.</p>
+<p><strong>Integration:</strong> Docling is a Python library and also offers a CLI. Installation and use are straightforward (the IBM blog boasts it takes “just five lines of code” to set up). It’s designed to integrate into LLM workflows: it works with <strong>LangChain and LlamaIndex</strong> natively. For example, LlamaIndex provides a <code>DoclingReader</code> that uses Docling under the hood so that documents can be directly ingested as Markdown with layout information. This makes it easy to plug Docling into an existing Python-based pipeline for question-answering or fine-tuning. Being open-source and local (no external API calls required), it’s flexible for enterprise use and can run on-prem. Note that Docling’s models (for layout and tables) do make it a heavier dependency – it requires downloading model weights and can use GPU for acceleration. Users report it is “super heavy, but close to perfect” in output. Still, it runs on a standard laptop and has been optimized for decent performance given its complex tasks.</p>
+<p><strong>Scientific/Technical Content:</strong> Docling was partly developed on technical documents (patents, manuals, etc.), so it performs well on structured scientific text, complex layouts, and technical tables. It classifies and preserves <strong>captions, footnotes, equations (as images)</strong>, and other elements better than simple extractors. Math formulas in PDFs that are text (e.g. LaTeX in PDF) might be captured as text, but formatting could be lost; truly rendering LaTeX in Markdown is not yet solved, though support is a “what’s next” item. For now, one might need an external tool (like Mathpix) to convert equation images to LaTeX if needed. Overall, Docling’s <strong>Markdown output</strong> is very clean and keeps semantic structure (sections, lists, etc.) intact, which is highly beneficial for LLM context.</p>
+<p><strong>Ease of Use:</strong> With both CLI and Python API, and good documentation, Docling is relatively easy to use. It’s under active development (community contributions welcome) and has already been integrated into popular frameworks. The trade-off for its high fidelity is its computational load – running multiple specialized models (layout analysis, table parsing, OCR) means it’s not the fastest lightweight tool. However, IBM has demonstrated its scalability: Docling processed <strong>millions of PDF pages</strong> for projects like CommonCrawl data extraction and is being used in IBM’s products. For a developer, installing the <code>docling</code> package and calling <code>DocumentConverter.convert()</code> yields a Markdown file with minimal effort. In summary, Docling is a top choice for <strong>maximum Markdown fidelity</strong> on complex docs, especially if they are digitally generated, and it integrates well into Python LLM workflows. Its current limitations are mainly with low-quality scans and the nascent support for things like equations or handwriting.</p>
+<h3 id="unstructuredio">Unstructured.io<a class="headerlink" href="#unstructuredio" title="Permanent link">&para;</a></h3>
+<p><strong>Unstructured</strong> is an open-source library (with an optional cloud service) that provides components to ingest and process documents into structured data, primarily aimed at RAG use cases. It became popular early (integrated with LangChain in 2022) as a way to parse PDFs and other files. Unstructured’s approach is to <strong>“partition” documents into semantic elements</strong> – paragraphs, headings, lists, table chunks, images, etc. – using format-specific logic. These elements can then be recombined or “chunked” for LLM consumption. Unstructured supports a wide range of file types (PDF, DOC(X), PPT(X), images, HTML, etc.) and can output content as plain text, JSON (with element metadata), or HTML/Markdown as needed. While it doesn’t natively produce a single monolithic Markdown file with all formatting preserved in the same way Docling does, it <strong>captures structure in its element outputs</strong> which can be serialized to Markdown or HTML. For example, it can extract tables and represent them in HTML or markdown table format, and pull images as base64 strings.</p>
+<p>In an evaluation of PDF parsers, Unstructured’s output was considered very high quality – preserving context and order. It smartly handled artifacts like footers/headers by not conflating them with body text, which is <em>“likely to benefit RAG systems”</em> (preventing irrelevant text from breaking chunks). It correctly keeps multi-column text separated (so text reading order is correct) in most cases, and identifies headings vs paragraphs accurately. One review gave Unstructured a score of <strong>“Excellent”</strong> for faithfully extracting text in a way that is chunk-ready. The library also attempts to <strong>preserve formatting</strong>: headings in PDF -&gt; heading elements (which one can render as <code>#</code> in Markdown), lists remain lists, and <strong>tables</strong> can be extracted as structured data or HTML. However, integrating images into markdown requires an extra step: Unstructured can extract images (as files or base64) but you must place them into the Markdown manually (e.g., with <code>![Alt text](data:image/png;base64,...)</code>). The same goes for tables: it can output HTML for tables, which one might convert to Markdown table syntax.</p>
+<p><strong>OCR and Scanned Document Support:</strong> Unstructured will use OCR when needed. In fact, <em>“for text, Unstructured works quite well, quickly processing easy documents while falling back to OCR when required”</em>. It uses the <strong>layoutparser</strong> and <strong>Tesseract</strong> by default for image-based PDFs. The open-source version handles basic OCR but may not be as accurate or fast on heavy OCR tasks. To address this, Unstructured.io provides cloud <strong>tiers</strong>: <em>Advanced</em> and <em>Platinum</em> modes use better OCR and even handwriting recognition (the Platinum tier, $30/1k pages, can handle handwriting). These are commercial endpoints but show that the ecosystem supports more difficult inputs. For open-source users, one can also configure a custom OCR in Unstructured’s pipeline (similar to how Docling can integrate alternatives). In summary, Unstructured can process scanned PDFs, but complex cases (handwritten forms, low-quality scans) may need the higher-tier service. On purely digital PDFs, it often avoids OCR and pulls text directly (e.g., via PDFMiner or PyMuPDF), preserving accuracy.</p>
+<p><strong>Chunking Capabilities:</strong> Chunking is a core concept in Unstructured’s design. It operates at the element level – after partitioning a document into its elements, you can specify a chunk size (in characters or tokens) and the library will <em>combine elements without breaking them</em> until the size is met. This ensures chunks are semantically coherent (e.g., a heading stays with its subsequent paragraph, multiple small paragraphs can be in one chunk). Only if an individual element is larger than the max size will it split that element by text length. This approach yields <em>semantic/structural chunking</em> by default, as opposed to naive splitting on every N tokens or newline. There are options to tweak chunking strategies – for example, you might want each top-level section as one chunk, or limit tables to their own chunk, etc. Unstructured’s documentation highlights that it <strong>preserves semantic units</strong> during chunking, unlike simpler newline-based splitters. This makes it very suitable for LLM pipelines, as each chunk is a logical piece of the document (improving LLM understanding). You can also disable chunking if you just want the full Markdown.</p>
+<p><strong>Integration:</strong> Unstructured is available as a Python package (<code>unstructured</code>), and it also offers a REST API (self-hosted or hosted). It was one of the first to integrate with <strong>LangChain</strong> (as a document loader) and can be used with LlamaIndex or any Python code. The <strong>Partition</strong> API returns Python dataclasses for each element (with metadata like type, text, coordinates). Converting those to Markdown is a matter of iterating through elements and mapping types to Markdown syntax (some community tools do this already). Additionally, Unstructured’s <strong>“staging”</strong> module can convert element lists to JSON or other schema, which can be helpful if you need a custom format. The ecosystem around Unstructured is growing – it’s used in many RAG pipelines, and there are third-party projects that extend it (for example, Pathway’s doc parser uses Unstructured and Docling under the hood). The open-source is free; the hosted version is pay-per-page with high throughput. Overall, integration is straightforward: a few lines to call <code>partition_pdf(filename)</code> and then handle the resulting elements.</p>
+<p><strong>Scientific/Technical Document Support:</strong> Unstructured can handle technical documents reasonably well. It will extract <strong>text and tables</strong> from PDFs of research papers or manuals, and it can also handle images (it can extract images and you could use an image captioning model afterwards if needed). However, it does not have special handling for math equations – if the PDF encodes an equation as text, it will appear, but possibly not in LaTeX format (just as characters or an image). If the equation is an image, Unstructured would treat it as an image element (with no built-in OCR specifically for math). So for scenarios heavy in math notation, additional steps are needed (Mathpix API or similar can complement the pipeline). That said, Unstructured’s general parsing of scientific docs (with multiple sections, figures, citations, etc.) is strong in terms of keeping sections separate and maintaining order. It was designed for semi-structured data like financial reports, scientific papers, etc. (in fact, it’s often used for legal/financial PDF processing). It might not preserve <em>all</em> formatting (like bold or italic text would just come through as plain text), whereas Docling might wrap those in Markdown syntax. So Markdown fidelity for rich text style is a bit lower: Unstructured’s focus is structural fidelity (what is a heading vs body), rather than stylistic. For most LLM use cases, this is acceptable.</p>
+<p><strong>Ease of Use:</strong> Installing <code>unstructured</code> is straightforward, but it may pull in many dependencies (it’s a modular library that can use various OCR or PDF backends). The documentation is extensive, and there are examples for common tasks. Basic usage is simple, but to get images or other advanced features, you need to dive into options (like <code>extract_image_contents=True</code>, etc.). The library is actively maintained by Unstructured.io and has an open community. One consideration is that for <strong>large volumes of documents,</strong> using the self-hosted or cloud Workflow Endpoint may be easier (the Workflow API can orchestrate chunking, embedding, etc., end-to-end). Flexibility is high: you can use it locally or as a service, and it supports many formats out of the box.</p>
+<p>In summary, <strong>Unstructured.io</strong> provides a highly flexible and effective way to turn complex documents into Markdown-friendly chunks. It excels at <strong>structural and semantic chunking</strong> and handles many document types. Its Markdown fidelity is good with structure (headings/tables), though it may not explicitly italicize or render formulas. For scanned docs, it does the job but might require higher-tier services for best results. Many users pair Unstructured with LLM pipelines successfully, thanks to its coherent output.</p>
+<h3 id="llamaindex-and-llamaparse">LlamaIndex (and LlamaParse)<a class="headerlink" href="#llamaindex-and-llamaparse" title="Permanent link">&para;</a></h3>
+<p><strong>LlamaIndex</strong> (formerly GPT Index) is not a document conversion tool per se, but rather a framework for <strong>LLM data indexing and retrieval</strong>. It provides connectors to ingest documents and build indices for querying with LLMs. In doing so, LlamaIndex has to parse documents, chunk them, and possibly preserve structure. The open-source LlamaIndex includes various <strong><code>DocumentReader</code></strong> classes: for example, a PDF reader that uses PyMuPDF to extract text, or integrations with Unstructured and Docling. By default, earlier versions of LlamaIndex would extract text from PDFs (losing images and some formatting). Users noted that <em>“LlamaIndex (default) has no integrated images”</em> when converting PDFs, and sometimes text order issues (likely due to underlying PDF extraction). To address complex docs, LlamaIndex has evolved to support external parsers:</p>
+<ul>
+<li><strong>DoclingReader</strong>: As mentioned, LlamaIndex can leverage Docling to produce rich Markdown and then split that into Nodes for indexing. This gives LlamaIndex-powered apps the same fidelity as Docling’s output.</li>
+<li><strong>UnstructuredReader</strong>: Similar integration exists to use Unstructured.io’s output in LlamaIndex.</li>
+<li><strong>SimpleDirectoryReader</strong>: A basic reader that can handle text and some PDFs, but without fancy formatting.</li>
+</ul>
+<p>Additionally, <strong>LlamaIndex introduced LlamaParse</strong> as part of their cloud offering (LlamaHub/LlamaCloud). LlamaParse is a hosted document parsing service. It has a <strong>Basic</strong> tier and a <strong>Premium</strong> tier; the premium one is aimed at maximum accuracy (and is quite expensive, \~$45/1k pages). LlamaParse presumably uses advanced ML (possibly their own models or a combination of methods) to extract PDFs into Markdown. In a direct comparison, LlamaParse was found to accurately extract tables and content but had some issues with layout in certain cases. For instance, one test showed LlamaParse mixing columns of text together, treating multi-column text as one continuous block (causing “gibberish” output in that segment). It also missed some headings by merging a heading line into the following paragraph. These issues led a reviewer to rate LlamaParse’s layout handling as <strong>“Fair”</strong>, whereas Unstructured was “Excellent”. However, LlamaParse did very well on tables, earning an “Excellent” score on table extraction quality. It generally recognizes tables, even complex ones, similarly to Docling’s performance. So, LlamaParse is strong but not infallible; it may be improving rapidly given it's a managed service.</p>
+<p><strong>Markdown Fidelity:</strong> With the new integrations, LlamaIndex can achieve high markdown fidelity by using Docling or Unstructured backends. On its own, the core library focuses more on text content. LlamaParse output is in Markdown format (with images as links to cloud storage, etc.) – all three top parsers compared (Unstructured, LlamaParse, Vectorize) <em>“are able to generate a markdown representation of the content,” preserving headings, images, graphs, formatting</em>. This is essential for LLM usage, and LlamaIndex’s philosophy aligns with that (keeping context). If using just LlamaIndex’s basic loader, you might get only plain text. But with minimal configuration, one can use the advanced readers to get structured Markdown. LlamaIndex itself will break documents into <strong>nodes</strong> (chunks) for you, typically aiming at \~512 tokens per chunk by default. You can configure chunk size and overlap easily. By default this is a <strong>structural/semantic chunking</strong> hybrid – it tries to chunk at paragraph or section boundaries when possible (it won’t cut off mid-sentence unless necessary). The integration with Docling means it can even chunk by the Markdown headings that Docling provides, which is very handy (each section becomes a node, etc.).</p>
+<p><strong>OCR support:</strong> LlamaIndex itself defers OCR to whatever reader is used. If you use the built-in PDFReader (PyMuPDF), that will only get text from PDFs with a text layer (no OCR). If you need OCR, you’d incorporate an OCR-based reader (Unstructured, Docling, or even a custom function using pytesseract). LlamaParse cloud likely has OCR in the backend for scanned PDFs, though details aren’t public. In practice, if you need to handle scanned documents in a LlamaIndex pipeline, you would call an OCR service first or use a tool like Docling which will handle it (Docling + RapidOCR for example).</p>
+<p><strong>Chunking and Integration:</strong> Chunking is one of LlamaIndex’s core strengths. Once the document is in Markdown or text form, LlamaIndex can apply <strong>structure-based splitting</strong> (e.g., split by headings, by semantic units if using their <code>NodeParser</code>). The new <strong>NodeParser</strong> concept in LlamaIndex allows custom parsing of a Markdown document into semantic nodes. For example, they provide a <code>MarkdownNodeParser</code> that can split a markdown by headings, subheadings, etc., automatically tagging each node with the section hierarchy (very useful for retrieval context). This means if you feed LlamaIndex a Markdown manual with <code>#, ##, ###</code> headings, you can get each subsection as a chunk with metadata indicating its position. LlamaIndex also supports <strong>keyword-based or semantic splitting</strong> if you want, but most often hierarchical splitting is used. Integration-wise, LlamaIndex is already the integration layer – it’s meant to plug into any LLM backend (OpenAI, local models) and vector stores. So using LlamaIndex means you are already in Python, and you can treat any of the above tools as a preprocessor stage or use the built-in connectors to do it seamlessly.</p>
+<p><strong>Scientific/Technical support:</strong> With the appropriate parser, LlamaIndex can ingest scientific documents well. It doesn’t do any special transformation on its own, so the capability depends on the underlying conversion. For example, to handle a chemistry PDF with formulas and images, one might use Docling to get the content (Docling will label images and preserve table structure, but might leave chemical equations as they are). LlamaIndex would then chunk and index that content. One advantage of LlamaIndex is you can enrich the document nodes with embeddings or metadata (like “this chunk came from Chapter 2” etc.) to aid retrieval. But in terms of conversion fidelity, LlamaIndex by itself doesn’t improve it; it leverages others. In summary, think of LlamaIndex as the <strong>orchestrator</strong>: it ensures whatever Markdown you get is fed correctly into an index. It now has good <strong>ecosystem support</strong> to use the best converters available (Docling integration is a prime example).</p>
+<p><strong>Ease of Use:</strong> For those already using LLM pipelines, LlamaIndex is quite user-friendly. Installing it (<code>pip install llama-index</code>) and using a reader like DoclingReader requires also installing the corresponding package (<code>llama-index-readers-docling</code> etc.). The documentation and community examples are solid. However, using LlamaIndex just for conversion might be overkill if you don’t need indexing or querying. Its value is more in the end-to-end pipeline (convert -&gt; embed -&gt; query). If we consider <strong>LlamaParse (cloud)</strong> as part of this category, that requires an API key and perhaps using their web interface or SDK. LlamaParse could be an option for those who want a managed solution without hosting their own Docling/Unstructured. But one must consider cost and data privacy (sending docs to a cloud service). LlamaIndex open-source gives you flexibility to choose open or closed solutions under one umbrella. Overall, LlamaIndex ensures tight <strong>integration with Python-based LLM workflows</strong> (since it <em>is</em> such a workflow tool), and via its modules you can achieve conversion, chunking, and integration in one go.</p>
+<h3 id="custom-llm-vision-models">Custom LLM Vision Models<a class="headerlink" href="#custom-llm-vision-models" title="Permanent link">&para;</a></h3>
+<p>Another approach to document conversion is to leverage <strong>multimodal Large Language Models</strong> or vision-enabled LLMs. This is a less traditional “tool” – it involves prompting an LLM (like GPT-4 Vision, or open-source multimodal models) with the document (as images or text) and asking it to produce Markdown. Essentially, the LLM itself acts as the parser, potentially handling complex content in a flexible way. Recent advances (e.g., GPT-4’s vision feature, or Google’s upcoming Gemini, and open models like LLaVA, BLIP-2, etc.) have made it possible to feed in a document page image and get a natural language (or structured) description of it.</p>
+<p><strong>Markdown Fidelity:</strong> A capable vision+language model can, in theory, output not just plain text but well-formatted Markdown if instructed. For example, one could prompt GPT-4 with: “You are an assistant that converts document images to Markdown. Preserve all headings, bold text, tables (use Markdown table syntax), and describe images.” The model might then generate Markdown that approximates the layout. This approach could capture <strong>semantic meaning</strong> and even <strong>describe non-textual elements</strong> (like <em>“Graph: a plot of X vs Y showing ...”</em>). It could also transcribe math equations by interpreting them, possibly yielding LaTeX if specifically asked. However, there are challenges: the LLM might <strong>hallucinate or omit content</strong> if the image is unclear or if it misunderstands something. Unlike deterministic parsers, an LLM might make minor errors (e.g., misread a number and “guess” it, or rephrase text). There is a trade-off: LLMs can handle ambiguity and context (reading handwriting better through context, for instance), but ensuring 100% faithful conversion is difficult. IBM researchers noted that their approach with Docling avoids the risk of hallucination by not relying on a generative model for conversion. So, while a custom LLM approach is flexible, one must carefully verify the output.</p>
+<p><strong>OCR and Scanned Support:</strong> Using an LLM for vision is essentially an advanced form of OCR+understanding. For purely scanned documents, a strong vision model can definitely parse the text (like OCR) and also interpret layout. Some users have reported success replacing traditional OCR pipelines with GPT-4 Vision, because it was <em>“so darn easy”</em> and effective in extracting information. Similarly, a comment on HN mentioned using <strong>Google Gemini 2.0</strong> to replace an OCR vendor, noting that with an LLM <em>“you have full control over the schema… the problem shifts from can we extract this to can we fit it in the context window”</em>. Essentially, an LLM can be instructed to output whatever structure you want (JSON, Markdown, etc.), which is very powerful. This means you can ask it to output exactly the Markdown format needed, including special handling (like <em>“use LaTeX for any equations”</em>). For scanned multi-page PDFs, one might iterate page by page (since image input per page) or use a high context multimodal model that accepts a whole document (if such becomes available). Current GPT-4 Vision is limited to images one at a time and may have input size limits.</p>
+<p><strong>Chunking:</strong> With an LLM approach, chunking is somewhat intrinsic – you’d likely process one page or section at a time (unless the model supports very long image sequences). You can also let the model decide logical chunks: e.g., <em>“read the document and split it into sections with Markdown headings accordingly.”</em> The LLM could output a naturally chunked Markdown where each section is clearly delineated. If needed, you could then further split by heading level. Since you “control the schema,” you could instruct the model on how to segment content. This is more of a manual approach compared to the built-in chunking functions of other tools.</p>
+<p><strong>Integration:</strong> Using LLMs for this requires access to the model. For GPT-4 Vision, that means an OpenAI API call with image, which is not yet widely general-purpose (and has costs and rate limits). There are open-source vision models (like BLIP-2, Donut, or LLaVA) that you can run locally, but their accuracy may be lower. For instance, <strong>Donut</strong> is a model specifically for document OCR without explicit OCR (an end-to-end transformer that outputs text from an image). Donut can be fine-tuned on documents to output Markdown or JSON. Such custom models could be integrated in Python pipelines (HuggingFace has implementations). However, doing this at scale might be slow or require GPU resources. The integration complexity is higher than using a ready library – you need to handle model inference and possibly prompt engineering. That said, frameworks like LangChain can incorporate an LLM with vision as a tool in an agent chain (e.g., feed each page image to the model and get text).</p>
+<p><strong>Scientific/Technical support:</strong> LLMs might actually shine here. A powerful model could read an equation and output it in $\LaTeX$ (if trained or if it can visually parse math notation – GPT-4 has been shown to output LaTeX for equations in some cases). It could also interpret diagrams and graphs in a meaningful way (though that veers into summarization rather than exact conversion). If the goal is strictly conversion, one might not want <em>interpretation</em>, just transcription. But even transcription of math by an LLM is impressive compared to generic OCR which usually fails on complex notation. For chemical structures or figures, an LLM could at least label them or describe them in alt-text, which is value-add. No other tool will spontaneously add <em>descriptive text</em> for an image – they just give you the image itself. So in contexts where you want to enrich the document for an LLM (say, explain a figure), a vision LLM can do that. However, caution: for factual fidelity, it might mis-describe a complex diagram. As of now (2025), these models are cutting-edge but not 100% reliable for detailed conversion tasks.</p>
+<p><strong>Ease of Use &amp; Flexibility:</strong> This approach is currently the most complex to implement and potentially the most expensive (if using paid API for GPT-4). It’s “easy” in the sense that you can give a single prompt “Convert this to markdown” and the model does a lot – but you have to manually oversee and possibly correct the output. There’s no turn-key library that guarantees consistent results every time. Also, sending large documents to an API can be slow. On the plus side, it’s very flexible: you can tailor the prompt to your specific document type (one can instruct a custom model to pay attention to certain details, or ignore certain sections).</p>
+<p>A likely best practice is to use LLMs in combination with other tools: e.g., use Docling or Unstructured to get a baseline Markdown (ensuring all text is captured exactly), then possibly have an LLM post-process that Markdown to, say, insert backticks around code snippets, or convert certain notations to LaTeX. This way, you get the accuracy of deterministic parsing with the smarts of an LLM for refinement.</p>
+<p>In conclusion, <strong>custom LLM vision models</strong> are an emerging method to convert documents. They offer unparalleled flexibility (any format to any output if you can describe it) and handle images/handwriting better than many static models. But they carry risks of errors and require careful implementation. They may be most useful when other tools fail (e.g., very messy documents, mixed languages, or needing AI to infer structure). For most standard use cases, a combination of classical parsing and targeted LLM use is preferable to relying fully on an LLM for conversion.</p>
+<h2 id="commercial-platforms">Commercial Platforms<a class="headerlink" href="#commercial-platforms" title="Permanent link">&para;</a></h2>
+<p>Open-source solutions can be powerful, but for <strong>enterprise-scale or highly accurate OCR needs</strong>, commercial cloud platforms are often considered. As one commenter aptly put it, <em>“If this is for anything slightly commercial... you are probably going to have the best luck using </em><em>Textract</em><em> / </em><em>Document Intelligence</em><em> / </em><em>Document AI</em><em>. Nothing else will get everything out with high accuracy.”</em>. These cloud services benefit from powerful infrastructure and training on diverse real-world documents. We’ll examine Amazon Textract and Azure Form Recognizer (Document Intelligence), with notes on Google’s Document AI. While these services <strong>don’t output Markdown directly</strong>, they provide structured data (JSON/XML) that can be transformed into Markdown.</p>
+<h3 id="amazon-aws-textract">Amazon AWS Textract<a class="headerlink" href="#amazon-aws-textract" title="Permanent link">&para;</a></h3>
+<p><strong>AWS Textract</strong> is a fully managed service for document text extraction and analysis. It can handle printed text, handwriting, forms, and tables. Textract’s API has two main modes: <em>Detect Document Text</em> (basic OCR) and <em>Analyze Document</em> (which identifies structure like form fields and table cells). For our purposes, using Analyze Document (with the “TABLES” feature) is most relevant, as it will yield table structures that we can convert to Markdown tables. Textract returns a JSON with blocks: lines, words, table cells, etc., including their coordinates on the page.</p>
+<p><strong>Markdown Fidelity:</strong> Textract itself doesn’t know about Markdown, but it preserves a lot of structure information. You can reconstruct <strong>paragraphs</strong> from the lines and their geometry (though it won’t label something as a “heading” or “title” – it just gives text and position). <strong>Tables</strong> come out as structured data (cells with row/column indices), which can be directly turned into a Markdown <code>| cell | cell |</code> table. It also detects selection elements (checkboxes) and form key-values, which could be formatted as lists or definition lists in Markdown. However, Textract does <strong>not preserve styles</strong> like bold or italic, and it does not inherently know section hierarchy. All text is essentially “plain”. One could infer headings if, say, a line is larger font or bold – but Textract doesn’t provide font info in its JSON. So you might rely on heuristic (e.g., all-caps lines or lines centered on page might be titles). In terms of output cleanliness, Textract is very <strong>accurate in text content</strong>. It was reported to <em>“perform admirably on tasks Tesseract struggles with, like handwriting and rough documents”</em>. For example, messy scans, water-damaged pages, or faint text are handled much better by Textract’s ML models than by open-source OCR. It’s been used for extracting information from forms and even handwriting with good accuracy. The downside noted is <strong>language support</strong>: Textract lags in non-Latin scripts. It struggles with languages like Chinese or Arabic, which Azure and Google handle better. For primarily English and similar languages, Textract is very strong.</p>
+<p><strong>OCR and Scans:</strong> This is Textract’s specialty. It was designed to process scanned documents at scale. It can read multi-column layouts (though the JSON will give you lines with coordinates; you have to determine reading order yourself by sorting lines top-left to bottom-right). Many PDF parsing issues (like reading order confusion) are mitigated because Textract relies on vision – it sees text in the correct order as humans would. However, it might not explicitly group columns; you might need to detect that two sets of lines are in parallel columns via their x-coordinates. Textract also handles <strong>handwritten text</strong> (with the AnalyzeDocument API including “forms” or using the specialized handwriting feature). For example, it can extract cursive writing from a form and include that in the text output. This is something most open-source tools (unless using a separate OCR engine) cannot do reliably. So for scan heavy workflows, Textract is a top performer. The trade-off is cost and needing to call an API.</p>
+<p><strong>Chunking:</strong> Textract will output data page by page (each page is a set of blocks). It doesn’t chunk beyond that. But since it’s not giving you one big text blob, you have the flexibility to create chunks. Typically, one would call Textract, get JSON for each page, and then process each page’s content. You could output one Markdown file per page, or combine them. If combining, you’d likely iterate in order and assemble Markdown, inserting <code>\pagebreak</code> or a level-1 heading for each page if desired. Structural chunking (by sections) would require you to identify section headings from the text and split accordingly. Because Textract itself doesn’t output heading markers, you have to impose your own logic. For instance, you might detect that a line with large text (if you have access to the document PDF, you could cross-reference with PDF styles or run a layout analysis similar to Docling’s on top of Textract’s text). Alternatively, one could feed Textract’s raw text into an LLM to decide chunk boundaries. In summary, <strong>chunking customization</strong> is in the developer’s hands when using Textract – it’s flexible but not automatic.</p>
+<p><strong>Integration:</strong> AWS provides SDKs for Textract in Python (boto3). It’s straightforward to call <code>Textract.analyze_document(Document=file, FeatureTypes=["TABLES","FORMS"])</code> and get JSON. The ecosystem includes higher-level tools like Amazon Comprehend or Amazon Athena that can consume Textract output, but for Markdown conversion you’d write a parser for the JSON. Many open-source projects exist that convert Textract JSON to CSV or readable text. Adapting one to Markdown is feasible. Textract can be integrated into LangChain as a tool (some community loaders use Textract for OCR). Since Textract is a cloud service, it requires AWS credentials and has usage costs. It’s serverless and can scale to thousands of pages quickly (with asynchronous batch jobs available). For LLM pipelines, one might use Textract to preprocess a batch of documents overnight, then feed the results to an LLM as needed. The <strong>ease of use</strong> is moderate: initial setup is easy if you are familiar with AWS, but interpreting the JSON correctly requires some work. Textract’s JSON is verbose (each word has a block, etc.), but focusing on higher-level blocks (lines and table cells) simplifies it.</p>
+<p><strong>Scientific/Technical Docs:</strong> Textract can extract any text, but it has no inherent understanding of formulas or special formatting. An inline equation in a PDF likely appears as a bunch of symbols which Textract will output in sequence (possibly with errors if symbols are unusual). It won’t identify it as an equation or give it in LaTeX. So, similar to others, math support is minimal except as raw text. For things like chemical structures or complex diagrams, Textract will not “understand” them – it might not even output anything if it’s purely graphical (no text). It does identify figures if there’s alt text or captions (the caption text will be read as text). One interesting aspect: Textract provides <strong>bounding box coordinates</strong>, so one could theoretically identify regions (if you know an area is a figure and want to label it). But that’s a lot of custom work. For technical tables and charts that are actually tables of numbers, Textract usually performs well – it can capture large tables as structured data (unlike some simpler tools that might flatten them). So for extracting data tables from scientific reports, Textract is useful, and you can output those as Markdown tables easily.</p>
+<p><strong>Ease &amp; Flexibility:</strong> Textract is easy if you accept its defaults and just need text and tables. It’s less flexible than open-source solutions in that you can’t easily modify how it works (it’s a black-box API). If Textract makes an error in reading order or misses a piece of text, you can’t tweak a parameter – you’d have to preprocess the document (e.g., split it differently) or use a different service. It’s also tied to AWS, which might be a pro (if you’re already on AWS) or a con (if data residency or vendor lock-in is a concern).</p>
+<p>In terms of output conversion: to integrate Textract into a Markdown workflow, you’ll likely write a script to translate Textract’s JSON to Markdown. This can include: iterating pages, assembling lines (maybe join lines into paragraphs using spacing info), outputting tables by collecting cell texts by row. It’s doable, and there might be libraries to help parse Textract output.</p>
+<h3 id="azure-form-recognizer-document-intelligence">Azure Form Recognizer (Document Intelligence)<a class="headerlink" href="#azure-form-recognizer-document-intelligence" title="Permanent link">&para;</a></h3>
+<p><strong>Azure Form Recognizer</strong> (recently also referred to as Azure Document Intelligence) is Microsoft’s analogous service. It offers a <em>Layout</em> model (for general document text &amp; layout), a <em>General Document</em> model (which returns a structured representation of paragraphs, tables, etc.), and specialized form models. For comparing, the <strong>Layout/General Document</strong> model is relevant: it will detect text lines, tables, and even some semantic roles like titles.</p>
+<p><strong>Markdown Fidelity:</strong> Azure’s output (if using the REST API v4.0) is a JSON with a content structure. It will list paragraphs, with their text, and indicate if something is a heading (the newer models do have a notion of a title or heading role for text blocks). It also captures <strong>font size and style</strong> to some extent. For example, it might mark a text element as “appearance: bold”. This means one could translate that into Markdown (<strong>bold</strong> text or <code># Heading</code> if large and bold). Azure also returns tables with cells and even <strong>grid structure</strong> reconstructed (similar to Textract). In side-by-side tests, Azure’s model was slightly better at preserving reading order for multi-column docs. It also supports more languages than Textract (including Arabic, Chinese, etc.), often with higher accuracy in those scripts. One test noted <em>“Azure performed admirably on all document sets,”</em> successfully extracting text from a multilingual, rough scan that included Chinese, where Textract struggled. Azure even pulled out hidden OCR text in a PDF that had a hidden layer – showing it’s quite robust. For Markdown conversion, Azure’s advantage is the structured output: it essentially gives you the document in a structured tree (pages -&gt; paragraphs, tables, etc). This can be mapped to Markdown fairly directly (paragraphs to plain text, headings to <code>#</code> if identified, tables to Markdown tables).</p>
+<p><strong>OCR and Scanned Support:</strong> Being a cloud OCR, Azure handles scanned and photographed documents very well. It also has a specific feature for <strong>handwritten</strong> text, particularly in forms or on lines. Azure’s handwriting recognition is on par with or better than Textract’s. And for non-Latin scripts or mixed-language docs, Azure is known to be strong. For example, an Arabic PDF test showed Azure correctly extracting right-to-left text with proper order, whereas an open-source approach might mess up character order. Azure’s Form Recognizer has a further ability: you can train custom models for specific document types (beyond our scope, but useful if you wanted to extract certain fields from say lab reports).</p>
+<p><strong>Chunking:</strong> Azure’s service returns results per page as well, but since it groups lines into paragraphs, you could use those groupings as initial chunks. The “General Document” model outputs elements that might correspond roughly to paragraphs or sections. If it tags headings, you can split by heading changes. Similar to Textract, you have control after the fact. Azure doesn’t impose a chunking— it just gives a structured representation. But because it is aware of some structure (unlike Textract which just gives positions), you might more easily identify logical chunks. For instance, Azure might return an array of paragraphs in reading order. You could simply iterate and concatenate until you hit a new section (if a heading element is encountered, you start a new chunk). In practice, one could transform Azure’s JSON to a Markdown with the same layout flow as the original document.</p>
+<p><strong>Integration:</strong> Azure provides an SDK (<code>azure-ai-formrecognizer</code> for Python) and a REST API. You submit the document (or a URL to it) and get back the JSON result. Like Textract, it’s asynchronous for large files (you submit a job and poll for result). The integration into Python pipelines is good, especially with the SDK which can directly give you Python objects for paragraphs, tables, etc. Converting to Markdown would be a custom step but straightforward given the structure. Azure’s pricing is comparable to Textract’s (roughly $1.5 per 1000 pages for layout analysis, with some free tier). If using within a large MS ecosystem, it can tie into Power Automate or Logic Apps too, but for LLM workflows, you’d likely just use the API then feed the text to an LLM.</p>
+<p><strong>Scientific/Technical support:</strong> Azure’s OCR will capture text and numbers accurately, even in equations (though, again, just as text). It might not know an equation is an equation, but if the characters are clear, it will get them (and since it supports more Unicode, it might handle Greek symbols, etc., better than Textract). Azure also has a prebuilt model for PDFs that tries to identify references, footnotes, etc., if I recall correctly (or at least the general model might label footnote areas differently). This could help with complex academic PDFs by separating main text from footnotes. Tables with merged cells or spanning columns are often well-captured by Azure’s table understanding. It might output complex tables more cleanly. For images/diagrams, like others, Azure won’t interpret them (unless you use their Computer Vision API separately to caption an image – a possibility if one wants to incorporate that).</p>
+<p><strong>Ease of Use:</strong> Azure’s Form Recognizer is relatively easy to use via their studio UI or SDK, but from a pure code standpoint, it’s a bit more involved than Textract’s single API call because you have to create a client and possibly handle polling. The documentation is good, and there’s an active community around it. One benefit is Azure’s JSON is less cumbersome than Textract’s. Also, Azure has recently unified their AI Document APIs, making it easier to call a single “analyze document” with the general model ID. This simplification helps developers. Flexibility is moderate: you can pick different models (Layout vs General vs specific). If the general model isn’t perfect, you might try the Layout model which just gives lines and bounding boxes (similar to Textract output), or train a model. That said, training custom models is overkill just for Markdown conversion – the prebuilt general model is usually enough.</p>
+<h3 id="google-document-ai-and-others">Google Document AI and Others<a class="headerlink" href="#google-document-ai-and-others" title="Permanent link">&para;</a></h3>
+<p>Google’s <strong>Document AI</strong> is another major service, offering OCR and specialized parsers. Its OCR (Vision API Text Detection or Document OCR) is very powerful for multilingual and tricky layouts. It returns JSON similar to others, including structure. In a comparison, Google performed <em>“admirably on all document sets”</em> and supported many languages (it handled the multilingual test with handwriting as well). It also has a high limit on cheap pricing for large volumes. The output from Google’s Document OCR includes paragraphs and detected layout structure (Google’s API uses a <code>Document</code> object with pages, blocks, paragraphs, etc., and it even can output a rendered HTML approximation). This makes it quite feasible to produce Markdown. For example, Google’s PDF OCR often includes detected lists and tables as HTML in their Document AI output.</p>
+<p>Other notable tools include <strong>Adobe PDF Extract API</strong> – which is a commercial API by Adobe to extract PDF content with styling. It produces JSON and optionally HTML of the PDF content with styling and structure. That could be converted to Markdown and might preserve bold/italic and such (since Adobe’s output is very detailed, including font information). Adobe’s is a paid service and not as commonly used in LLM workflows yet, but it’s relevant for completeness.</p>
+<p>There are also specialized tools like <strong>Mathpix</strong> (Snip) which is a service geared towards converting scientific PDFs (especially ones with lots of math) into LaTeX, Markdown, or HTML. Mathpix excels at extracting math equations accurately as LaTeX and can output Markdown with equations in <code>$...$</code>. It’s a commercial tool often used by academics. If the priority is <strong>math fidelity</strong>, Mathpix is likely the best (but it won’t preserve the full layout like a general tool; it’s more about the content and LaTeX).</p>
+<p>Finally, we should mention <strong>LLMWhisperer</strong> (from the Unstract blog comparison) as a rising alternative. It combines OCR and LLM techniques to parse documents. It was shown to handle handwriting and complex forms better than Docling, but it’s a relatively new/lesser-known solution (possibly closed-source or limited release). Its approach underscores the trend of hybrid solutions: using deep learning for OCR plus an LLM for contextual understanding.</p>
+<p>For most users, AWS, Azure, or Google’s services will cover the bases when open-source isn’t enough. They offer reliability and support, at the cost of direct Markdown output (requiring a conversion step) and of course cost per use.</p>
+<h2 id="comparative-features-and-performance">Comparative Features and Performance<a class="headerlink" href="#comparative-features-and-performance" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the key features of each discussed tool/platform, to help compare their strengths:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tool/Platform</strong></th>
+<th><strong>Markdown Fidelity</strong></th>
+<th><strong>OCR &amp; Scans</strong></th>
+<th><strong>Chunking Support</strong></th>
+<th><strong>Integration (Python/LLM)</strong></th>
+<th><strong>Scientific/Tech Support</strong></th>
+<th><strong>Ease of Use &amp; Flexibility</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IBM Docling</strong> (open)</td>
+<td>Excellent layout preservation – outputs headings, lists, tables, and images in Markdown as they appear. Bold/italics preservation is implicit. Lacks native math recognition (equations as images or text); future support planned.</td>
+<td>Avoids OCR for digital text (no errors from OCR). Uses integrated OCR (EasyOCR/Tesseract) for scanned content, which works but slower; can integrate faster OCR (RapidOCR). Struggles with handwriting or very poor scans.</td>
+<td>Outputs a structured Markdown document with page breaks and section headings intact. Can split by page or section via API options. Pairs with LlamaIndex/LangChain chunkers easily (e.g., each heading becomes a chunk). Structural chunking is natural due to preserved hierarchy.</td>
+<td>Native Python library + CLI. Seamless integration with LlamaIndex and LangChain. Local execution (no cloud needed). Requires downloading ML models; benefits from GPU for speed. Strong community support (IBM + open-source).</td>
+<td>Designed on manuals/reports – handles complex layouts, technical tables, and captions well. Does not yet parse formulas into LaTeX (will include as images or text). Good for multi-column scientific docs and preserving figure placement.</td>
+<td>Moderate setup (pip install + model downloads). 5-line usage for basic conversion. High resource usage (heavy models). Very flexible (MIT license, extensible models). Fast given its complexity, but not real-time lightweight.</td>
+</tr>
+<tr>
+<td><strong>Unstructured.io</strong> (open)</td>
+<td>High structural fidelity. Identifies document elements (titles, paragraphs, lists, tables) and can output them in order. Can produce HTML/Markdown representations; tables preserved (as HTML or Markdown). Does not automatically mark bold/italic. Images extracted as base64 (user inserts into MD).</td>
+<td>Uses PDF text layer when available; falls back to OCR automatically for images. Default OCR via Tesseract or similar – adequate for moderate scans. Handwriting support limited in open version; <em>Platinum</em> cloud tier handles handwriting. Multi-language OCR depends on Tesseract models (cloud uses Google Vision for advanced).</td>
+<td>Strong chunking capabilities using semantic elements. By default, combines elements into chunks without breaking them – ensuring semantic coherence. Offers parameters to chunk by size or section breaks. Easy to get list of chunked elements for direct LLM input.</td>
+<td>Python library and REST API available. Easy integration with LangChain (already has UnstructuredLoader) and can be used in any Python workflow. Cloud API for scalability. Output is in Python object or JSON form (requires a small conversion to Markdown syntax).</td>
+<td>Well-suited for technical docs: preserves sections, can extract tables to structured data (keeping rows/columns). No special math formula parsing, but will capture formula text or images. Handles images/figures by extraction (not interpretation). Struggles only if documents are extremely unstructured (e.g., freeform handwriting).</td>
+<td>High flexibility (open source, self-host or cloud). Setup involves installing dependencies (which can be heavy if enabling all file types). Once running, it’s straightforward. The cloud service simplifies use (just an API call). Good documentation. Need to write glue code to assemble final Markdown from elements (but many examples exist).</td>
+</tr>
+<tr>
+<td><strong>LlamaIndex</strong> (open) +<br><strong>LlamaParse</strong> (cloud)</td>
+<td>Fidelity varies with the loader used: Using Docling or Unstructured connectors yields the same high fidelity outputs described above. Default PDF loader (PyMuPDF) preserves text but loses images and formatting (plain text only). LlamaParse cloud produces very good Markdown (headings, lists, tables, images), but some layout errors (column mix-ups, occasional missed heading) were observed. Tables from LlamaParse are accurately captured (Excellent).</td>
+<td>Depends on chosen backend: PyMuPDF loader has no OCR (scanned docs are not read). Unstructured/Docling backends add OCR support as those tools do. LlamaParse cloud likely uses OCR internally for scans – in tests it processed scanned content, but exact accuracy is proprietary. For robust OCR in LlamaIndex, one can call an external OCR tool or use the above libraries.</td>
+<td>Flexible chunking through LlamaIndex’s <code>Document</code> and <code>Node</code> classes. Typically chunks by \~512 tokens, respecting paragraph boundaries. With structured inputs (like Docling’s Markdown), it can chunk by heading or semantic unit using the MarkdownNodeParser. Supports both <strong>structural</strong> (by sections/heads) and <strong>semantic</strong> (by embedding similarity or custom rules) chunking. Users can customize chunk size/overlap easily.</td>
+<td>Python integration is native – LlamaIndex is itself a Python framework for LLM data. Readers exist for various formats (and can be extended). It integrates with LangChain or can operate standalone for QA systems. LlamaParse cloud integration requires API usage or their web UI. Ecosystem is strong, with many community extensions.</td>
+<td>With the right parser, it handles scientific docs well (since it can ingest Docling output including tables, figures). No inherent scientific parsing on its own – relies on upstream conversion. It adds value by allowing metadata tagging (e.g., section titles as metadata) which can help in technical QA. LlamaParse aims to handle diagrams, etc., but likely doesn’t interpret them beyond embedding the image reference.</td>
+<td>Open-source LlamaIndex is easy to install and use for basic tasks. Using advanced readers like DoclingReader adds installation steps (installing that plugin and Docling itself). Overall, developer-friendly with tutorials available. The cloud LlamaParse is easy (just upload docs), but cost can be high for large volumes. LlamaIndex code is very flexible – you can swap components (parsers, chunkers, vector stores) to suit your needs.</td>
+</tr>
+<tr>
+<td><strong>Custom LLM Vision</strong> (GPT-4 Vision, etc.)</td>
+<td>Potentially high fidelity if prompted well, but not guaranteed. Can preserve structure and convert to Markdown with guidance. May even describe images/graphs in alt-text. However, risk of minor errors or rephrasing – not a verbatim conversion. Could produce LaTeX for equations (if model is capable), yielding better math fidelity than others. Quality depends on model’s understanding. No built-in consistency check (requires manual QA).</td>
+<td>Excels at OCR on the fly: a strong multimodal LLM can read printed or handwritten text from images, even complex layouts. For example, GPT-4 Vision can read cursive handwriting or low-quality scans that stump normal OCR. Multi-language is typically supported if the model was trained on them. Essentially unlimited to what the model “sees” – but slower and expensive for large docs.</td>
+<td>No automatic chunking; the user must feed manageable chunks (e.g., one page per prompt). An LLM could be instructed to output each section separately, but context window limits apply. If using GPT-4 (with vision), you might process page by page (each page yields Markdown). Combining results is on the user. Newer models with huge context (e.g., Claude 100k with images, or future multimodal with &gt;100 page context) could one-shot chunk a whole doc.</td>
+<td>Integration is non-trivial. Requires access to a vision-capable LLM (OpenAI API or local model with suitable interface). In Python, one might use OpenAI’s API (once vision is available there) or HuggingFace transformers for open models. This approach is more custom – not a drop-in library. Some frameworks (LangChain) allow tools for vision, but prompt engineering is needed to ensure correct Markdown output.</td>
+<td>Could be very good for scientific content: can read equations and possibly output them in proper notation, interpret unusual symbols, and incorporate domain knowledge to correct OCR errors. Also can summarize or label figures. However, it might hallucinate interpretations (need to constrain it to just transcribe). It’s the only approach that might <em>add</em> value by explaining diagrams or decoding complex handwritten notes using language understanding.</td>
+<td>Low ease-of-use at present. It’s essentially an R\&amp;D approach. Very flexible in theory (just change the prompt to get different output formats), but results can vary run to run. Also, using closed models raises data privacy issues and cost concerns. Open-source vision LLMs are improving, but require ML expertise to deploy. This method is best if other tools fail and you need an AI’s understanding; otherwise, it’s an expensive route to get Markdown.</td>
+</tr>
+<tr>
+<td><strong>AWS Textract</strong> (cloud)</td>
+<td>High accuracy text extraction. Preserves tables and forms structure in JSON (can convert to MD tables/lists). Does <strong>not</strong> preserve visual formatting like headings or bold – all text is plain, position data can be used to infer structure. No native Markdown output.</td>
+<td>Excellent OCR, including difficult scans and handwriting. Struggles with non-Latin scripts (limited support for e.g. Chinese, Arabic). Very reliable on printed English, even noisy documents.</td>
+<td>Outputs per-page blocks; no direct chunking beyond page division. Custom logic needed to group lines into paragraphs/sections for chunks. Flexible because you have full control: e.g., chunk by page or combine small pages, etc.</td>
+<td>API/SDK integration (boto3). Easy to call from Python and get results. Integrates with other AWS AI services. Need to write parsing of JSON to Markdown. Fully managed (auto-scales, but internet required).</td>
+<td>Handles standard technical content well (text and tables). Mathematical notation will be captured as text but not formatted. No understanding of figures beyond extracting any text in them. Good for forms and structured reports.</td>
+<td>Using the service is easy (no ML setup), but processing output is a developer task. Moderate flexibility (you cannot change how Textract works, but you can post-process its results arbitrarily). Must consider cost ($) and possibly rate limits. Reliable and maintenance-free from an infrastructure perspective.</td>
+</tr>
+<tr>
+<td><strong>Azure Form Recognizer</strong> (cloud)</td>
+<td>Very good structure preservation. Returns hierarchical content: paragraphs (with possible role like title), tables, etc. Allows detection of headings (if text is larger/bold) which can translate to Markdown headings. Like Textract, provides text content without markdown syntax, but with more layout info (e.g., list vs paragraph distinction).</td>
+<td>Top-tier OCR capability. Reads multi-language, multi-direction text better than most. Great on scanned docs, including mixed languages and moderate handwriting. Also captures things like checkbox state or selection marks.</td>
+<td>Also paginated output. Maintains grouping of lines into paragraphs, so easier to chunk by paragraph. Can identify section breaks to some degree. No auto-chunk output, but the structured result makes it simpler to define chunks (e.g., treat each paragraph or section as a chunk node).</td>
+<td>Strong Python SDK and REST API. Quick integration into applications. Output parsing is simpler than Textract due to labeled structure. Azure’s ecosystem allows connecting to cognitive search, etc., if needed. Cloud-only (requires Azure account).</td>
+<td>Excels in varied content: from technical diagrams (extracts any text) to dense research papers. Known to successfully extract right-to-left text and mix of scripts in one doc. Math is treated as text. Overall, very suitable for technical documents and forms.</td>
+<td>Good documentation and relatively easy setup via Azure Portal or code. Some learning curve for JSON schema. More flexible than Textract in choosing different models (layout vs general). Pricing comparable to AWS. As a cloud service, very easy to scale and use once set up.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table Key:</strong> <em>For each tool, we highlight key points on Markdown output, OCR capability, chunking method, integration, scientific doc handling, and overall ease/flexibility.</em></p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Choosing the “best” document-to-Markdown conversion tool depends on the specific needs and constraints of your project. If <strong>maximum fidelity</strong> of formatting (including integrated images and tables) is required and you prefer an open-source, on-premise solution, <strong>IBM Docling</strong> currently stands out – it produces highly structured Markdown output and integrates well with Python pipelines, though at the cost of heavy resource usage. <strong>Unstructured.io</strong> is another excellent open solution, especially valued for its <strong>chunking and semantic partitioning</strong>; it may require a bit more assembly to get a single Markdown file, but offers flexibility and solid performance (and a hosted option for tougher OCR tasks). For those already leveraging LLM frameworks, <strong>LlamaIndex</strong> provides a convenient way to plug these conversion capabilities into an end-to-end pipeline; with the right readers (Docling or Unstructured), it can match their fidelity and adds easy chunking and querying on top.</p>
+<p>When dealing with a lot of <strong>scanned documents or diverse languages</strong> where accuracy is paramount, the <strong>commercial OCR platforms (AWS Textract, Azure Form Recognizer, Google Doc AI)</strong> are very strong. Azure and Google especially handle multilingual and complex layouts with high accuracy. They can be used to get a baseline structured output, which can then be converted to Markdown. The downside is extra coding to transform JSON to Markdown and reliance on cloud services (with associated costs). If using these, a typical workflow might be: run the doc through the cloud OCR -&gt; get JSON -&gt; use a script or an LLM to format that into Markdown (the latter could be a clever use of an LLM for just formatting tasks).</p>
+<p><strong>Custom LLM vision approaches</strong> are emerging as a powerful but experimental route. They might not yet replace dedicated conversion pipelines for reliability, but they offer a glimpse of the future: where you can simply “ask” an AI to read a document and output structured Markdown, combining OCR, understanding, and formatting in one step. Already, some have found that a GPT-4 with vision can simplify workflows that previously required multiple OCR and parsing steps. Over time, as context lengths grow and multimodal models improve, this approach might become more feasible at scale (especially once you can process long documents in one go with an AI model). For now, it can be used in niche cases or to handle elements others can’t (like describing a chart).</p>
+<p>In summary, for converting complex scientific or technical documents to Markdown for LLM consumption:</p>
+<ul>
+<li><strong>IBM Docling</strong> is ideal when you need a local tool that outputs a near replica of the document’s structure in Markdown (great for manuals, reports, etc., with minimal post-editing).</li>
+<li><strong>Unstructured.io</strong> is excellent for breaking down documents into clean chunks and covers many formats; it’s a good generalist and integrates easily, though you might have to assemble the final Markdown.</li>
+<li><strong>LlamaIndex</strong> is a connector that can incorporate these tools – use it if you want an all-in-one pipeline to ingest docs, chunk, and query, but know that it inherits the strengths/weaknesses of whichever parser you choose (or try their LlamaParse for a managed solution with pretty high quality output).</li>
+<li><strong>LLM vision models</strong> are a cutting-edge alternative when others fail – for instance, reading messy handwriting or extracting text from complex visuals – but require careful prompting and validation.</li>
+<li><strong>AWS/Azure/Google</strong> cloud services are robust choices for OCR-intensive needs and large-scale operations, ensuring you don’t miss any text. They give you the raw materials (text, structure) to build Markdown. Azure in particular provides rich structural info to identify headings and tables for Markdown conversion.</li>
+</ul>
+<p>Each option has trade-offs in terms of <strong>accuracy, completeness, cost, and convenience</strong>. In practice, many solutions combine these tools: e.g., using Docling to parse most of a PDF but falling back to an OCR API for a particularly problematic page, or using Unstructured to get chunks and then employing an LLM to polish the Markdown (adding backticks for code or formatting math). By understanding the strengths of each, one can pick the right tool for each aspect of the document conversion task.</p>
+<p>The good news is that the ecosystem is rapidly evolving – the focus on RAG and custom model training has driven vast improvements in document parsing in the last 1-2 years. We now have open libraries that rival proprietary systems and a convergence of techniques (CV for layout, NLP for content). For the foreseeable future, a combination of <strong>specialized parsing models</strong> (to avoid hallucinations and capture exact text) and <strong>LLM-based enhancements</strong> (for intelligent structuring and filling gaps) will likely offer the best results. Users should choose a tool or combination that best fits their documents’ nature and their pipeline requirements. With the above comparisons, one can confidently select and implement a solution that yields <strong>clean, structured Markdown ready for LLM processing</strong>, even from the most complex documents.</p>
+<p><strong>Sources:</strong></p>
+<ol>
+<li>IBM Research Blog – <em>“A new tool to unlock data from enterprise documents for generative AI”</em> (Docling announcement)</li>
+<li>LlamaIndex Documentation – <em>Docling Reader Overview</em></li>
+<li>Medium – <em>“Unleashing the Power of Your Data: RAG with Docling and LlamaIndex”</em></li>
+<li>Unstructured.io Documentation – <em>Chunking in Unstructured</em></li>
+<li>Level Up Coding – <em>“Best PDF Extractor for RAG? (LlamaParse vs Unstructured vs Vectorize)”</em></li>
+<li>Unstract Blog – <em>“Docling vs LLMWhisperer”</em> (Docling features/limits)</li>
+<li>HackerNews Discussion – <em>Ask HN: Parsing PDFs for RAG</em> (comments on Unstructured, Textract, etc.)</li>
+<li>MuckRock – <em>“Our search for the best OCR tool in 2023”</em> (OCR tools comparison, Textract/Azure/Google results)</li>
+<li>Medium – <em>“Using Docling’s OCR with RapidOCR”</em> (Docling technical report excerpts)</li>
+<li>Level Up Coding – (table extraction quality in LlamaParse vs others)</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 WorldlyCode
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/worldlycode/nanobot-dev-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
