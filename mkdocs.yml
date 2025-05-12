@@ -116,7 +116,7 @@ nav:
     - Logging with Python: blog/logging.md
     - Packages and Imports: blog/packages-and-imports.md
     - Configuring pgAdmin: blog/pgadmin.md
-
+    - Document Conversion Tools: blog/parsing-docs.md
 extra:
   social:
     - icon: fontawesome/brands/github
